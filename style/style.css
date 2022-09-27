@@ -123,6 +123,7 @@ a {
   line-height: 1.7;
   opacity: 0.8;
   padding-left: 16px;
+  margin-bottom: 8px;
 }
 
 .creation-page {
@@ -322,4 +323,10 @@ input[type="radio"]:checked::after {
   width: 24px;
   height: 24px;
   background: url("../assets/check-circle.svg") no-repeat;
+}
+
+.creation-epitaph__text {
+  margin-bottom: 30px;
+  text-align: center;
+  padding: 0 65px;
 }
