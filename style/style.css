@@ -131,6 +131,10 @@ a {
   margin-bottom: 8px;
 }
 
+.bg-light-blue {
+  background-color: #F7FAFC;
+}
+
 .creation-page {
   background-color: #F7FAFC;
   padding-top: 100px;
@@ -155,6 +159,29 @@ a {
 
 .creation-page__text {
   text-align: center;
+}
+
+.creation-page__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 30px;
+}
+
+.creation-page__btns button {
+  padding: 12px 38px;
+}
+
+.creation-page__publish {
+  margin-left: 20px;
+  background-color: #C69A39;
+  border: none;
 }
 
 .header {
