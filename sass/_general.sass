@@ -34,6 +34,8 @@ a
     background-color: #fff
     text-align: center
     font-size: 14px
+.mb-0
+    margin-bottom: 0 !important
 
 .title
     font-family: 'Calvino'
@@ -51,10 +53,11 @@ a
     display: flex
     flex-direction: column
 .input
-    border: 0.5px solid #011C1A
+    border: 0.5px solid $text-color
     border-radius: 12px
     padding: 12px 16px
     width: 100%
+    color: $text-color
     &::placeholder
         font-size: 16px
         line-height: 1.5
@@ -76,7 +79,8 @@ a
     &__section
         background-color: #fff
         border-radius: 40px
-        padding: 30px 55px 45px
+        padding: 30px 21px 45px
+        margin-bottom: 50px
     &__section-title
         font-size: 40px
         margin-bottom: 25px

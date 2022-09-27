@@ -1,0 +1,61 @@
+.creation-template
+    &__wrap
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        align-items: center
+        width: calc(100% + 20px)
+        transform: translateX(-10px)
+    &__item
+        flex-basis: 25%
+        padding: 0 10px
+    &__hero
+        overflow: hidden
+        border-radius: 28px
+        border: 0.5px solid #000
+        margin-bottom: 24px
+        & img
+            width: 100%
+    &__info
+        padding: 7px 23px 18px
+        & h4
+            font-family: 'Calvino'
+            font-weight: 600
+            font-size: 7px
+            line-height: 2.3
+            text-align: center
+            color: $text-color
+            text-align: left
+        & p
+           font-size: 4px
+           text-align: left
+    &__name
+        text-align: center
+        opacity: 0.8
+    &__radio
+        position: relative
+        margin: auto
+        margin-bottom: 5px
+        display: block
+        cursor: pointer
+        width: 20px
+        height: 20px
+
+input[type="radio"]:checked
+    &::before
+        position: absolute
+        top: -2px
+        left: -2px
+        content: ''
+        width: 24px
+        height: 24px
+        background: #fff
+        border-radius: 50%
+    &::after
+        position: absolute
+        top: -2px
+        left: -2px
+        content: ''
+        width: 24px
+        height: 24px
+        background: url('../assets/check-circle.svg') no-repeat
