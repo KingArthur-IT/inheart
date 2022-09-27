@@ -483,3 +483,54 @@ input[type="radio"]:checked::after {
   padding: 12px 30px;
   margin-top: 30px;
 }
+
+.creation-find__text {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.creation-find__map {
+  border-radius: 28px;
+  width: 100%;
+  margin: 30px 0;
+}
+
+.creation-find__coords-wrap {
+  max-width: 414px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 18px auto 14px;
+}
+
+.creation-find__coord {
+  -ms-flex-preferred-size: 48%;
+      flex-basis: 48%;
+}
+
+.creation-find__help {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.creation-find__help img {
+  margin-right: 5px;
+}
+
+.creation-find__help p {
+  font-size: 14px;
+  color: #C69A39;
+}
