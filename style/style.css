@@ -51,6 +51,10 @@ a {
   font-size: 14px;
 }
 
+.btn img {
+  margin-right: 3px;
+}
+
 .mb-0 {
   margin-bottom: 0 !important;
 }
@@ -417,4 +421,65 @@ input[type="radio"]:checked::after {
       -ms-flex-align: center;
           align-items: center;
   padding: 3px 16px;
+}
+
+.creation-refs__text {
+  text-align: center;
+  margin-bottom: 6px;
+  padding: 0 100px;
+}
+
+.creation-refs__ads-text {
+  font-size: 14px;
+  color: #C69A39;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.creation-refs__btn {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px 30px;
+}
+
+.creation-memories__text {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 0 40px;
+}
+
+.creation-memories__add-text {
+  max-width: 414px;
+  margin: auto;
+  margin-bottom: 22px;
+  margin-top: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.creation-memories__add-text img {
+  margin-right: 5px;
+}
+
+.creation-memories__btn {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px 30px;
+  margin-top: 30px;
 }
