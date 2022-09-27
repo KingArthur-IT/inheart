@@ -16,7 +16,50 @@
     </header>
     <main class="creation-page">
         <div class="container">
-            <h1 class="creation-page__title">Створення <br> сторiнки пам'ятi</h1>
+            <h1 class="title creation-page__title">Створення <br> сторiнки пам'ятi</h1>
+            <section class="creation-page__section creation-main">
+                <h2 class="title creation-page__section-title">Головна iнформацiя</h2>
+                <p class="text creation-page__text creation-main__text">
+                    Пам'ятна фотографія
+                </p>
+                <p class="creation-main__subtext">
+                    Ви можете завантажити зображення <br>
+                    у форматах .JPG або .PNG. Розмір фотографії <br>
+                    не може бути меншим ніж 400 рх на 500 рх.
+                </p>
+                <div class="creation-main__photo">
+                    <div class="creation-main__photo-empty">
+                        <img src="./assets/camera-icon.svg" alt="camera">
+                        <p class="text">Завантажити</p>
+                    </div>
+                </div>
+                <div class="input__wrapper">
+                    <label class="label">Прізвище</label>
+                    <input type="text" class="input" placeholder="Прізвище Усоблого">
+                </div>
+                <div class="input__wrapper">
+                    <label class="label">Ім'я</label>
+                    <input type="text" class="input" placeholder="Ім'я Усоблого">
+                </div>
+                <div class="input__wrapper">
+                    <label class="label">По батькові</label>
+                    <input type="text" class="input" placeholder="По батькові Усоблого">
+                </div>
+                <div class="input__wrapper creation-main__date-wrap">
+                    <div class="creation-main__date">
+                        <div class="input__wrapper">
+                            <label class="label">Дата народження</label>
+                            <input type="date" class="input">
+                        </div>
+                    </div>
+                    <div class="creation-main__date">
+                        <div class="input__wrapper">
+                            <label class="label">Дата смерті</label>
+                            <input type="date" class="input">
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
 </body>
