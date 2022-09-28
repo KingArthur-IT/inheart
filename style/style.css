@@ -1,13 +1,20 @@
 @font-face {
   font-family: 'Grafita';
-  src: url("../fonts/Grafita normal.otf") format("opentype");
+  src: url("../fonts/Grafita Normal.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Grafita Special';
+  src: url("../fonts/Grafita Special.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Calvino';
-  src: url("../fonts/Calvino-Semibold.ttf") format("truetype");
+  src: url("../fonts/calvino/Calvino-Semibold-trial.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
 }
@@ -91,6 +98,8 @@ a {
   padding: 12px 16px;
   width: 100%;
   color: #011C1A;
+  -webkit-transition: border .2s ease;
+  transition: border .2s ease;
 }
 
 .input::-webkit-input-placeholder {
@@ -119,6 +128,16 @@ a {
   line-height: 1.5;
   color: #8FB7C5;
   opacity: 0.5;
+}
+
+.input:focus {
+  outline: none !important;
+  border-color: #C69A39;
+}
+
+.input:active {
+  outline: none !important;
+  border-color: #C69A39;
 }
 
 .label {
@@ -159,6 +178,7 @@ a {
 
 .creation-page__text {
   text-align: center;
+  font-family: 'Grafita Special';
 }
 
 .creation-page__btns {
@@ -444,18 +464,21 @@ input[type="radio"]:checked::after {
 }
 
 .creation-epitaph__text {
+  font-family: 'Grafita Special';
   margin-bottom: 30px;
   text-align: center;
   padding: 0 25px;
 }
 
 .creation-media__text {
+  font-family: 'Grafita Special';
   margin-bottom: 30px;
   text-align: center;
   padding: 0 65px;
 }
 
 .creation-media__photo-text {
+  font-family: 'Grafita Special';
   margin-bottom: 18px;
 }
 
@@ -537,6 +560,7 @@ input[type="radio"]:checked::after {
 }
 
 .creation-refs__text {
+  font-family: 'Grafita Special';
   text-align: center;
   margin-bottom: 6px;
   padding: 0 100px;
@@ -561,6 +585,7 @@ input[type="radio"]:checked::after {
 }
 
 .creation-memories__text {
+  font-family: 'Grafita Special';
   text-align: center;
   margin-bottom: 30px;
   padding: 0 40px;
@@ -598,8 +623,15 @@ input[type="radio"]:checked::after {
 }
 
 .creation-find__text {
+  font-family: 'Grafita Special';
   text-align: center;
   margin-bottom: 30px;
+}
+
+.creation-find__subtext {
+  font-family: 'Grafita Special';
+  text-align: center;
+  margin-bottom: 18px;
 }
 
 .creation-find__map {
@@ -616,7 +648,7 @@ input[type="radio"]:checked::after {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 18px auto 14px;
+  margin: 0 auto 14px;
 }
 
 .creation-find__coord {
