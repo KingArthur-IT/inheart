@@ -209,6 +209,21 @@ textarea {
   max-width: 100px;
 }
 
+@media screen and (max-width: 767px) {
+  .header__wrapper {
+    padding: 26px 30px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .header__wrapper {
+    padding: 16px 20px;
+  }
+  .header__logo {
+    max-width: 87px;
+  }
+}
+
 .footer {
   background-color: #001211;
   padding: 68px 80px 15px;
