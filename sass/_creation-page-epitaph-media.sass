@@ -52,10 +52,8 @@
         align-items: center
         padding: 6px 16px
         flex-basis: 43.2%
-    &__attachment-mobile
-        display: none
-        align-items: center
-        padding: 6px 16px
+        & .mobile
+            display: none
 
 @media screen and (max-width: 424px)
     .creation-epitaph
@@ -89,9 +87,8 @@
             & p
                 margin: 18px 0
         &__attachment
-            display: none
-        &__attachment-mobile
-            display: flex
-            flex-basis: 100%
-            width: 100%
+            & .desctop
+                display: none
+            & .mobile
+                display: inline
 

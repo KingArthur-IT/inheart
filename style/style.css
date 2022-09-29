@@ -811,12 +811,8 @@ input[type="radio"]:checked::after {
       flex-basis: 43.2%;
 }
 
-.creation-media__attachment-mobile {
+.creation-media__attachment .mobile {
   display: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 6px 16px;
 }
 
 @media screen and (max-width: 424px) {
@@ -866,16 +862,11 @@ input[type="radio"]:checked::after {
   .creation-media__inputs p {
     margin: 18px 0;
   }
-  .creation-media__attachment {
+  .creation-media__attachment .desctop {
     display: none;
   }
-  .creation-media__attachment-mobile {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    width: 100%;
+  .creation-media__attachment .mobile {
+    display: inline;
   }
 }
 
