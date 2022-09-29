@@ -51,11 +51,12 @@ a {
   cursor: pointer;
   border: 0.5px solid #011C1A;
   border-radius: 12px;
-  padding: 14px 16px;
+  padding: 15px 16px;
   color: #011C1A;
   background-color: #fff;
   text-align: center;
   font-size: 14px;
+  min-height: 48px;
 }
 
 .btn img {
@@ -70,6 +71,24 @@ a {
 .creation-btn:hover {
   background-color: #C69A39;
   border: 0.5px solid #C69A39;
+}
+
+.creation-btn:hover svg rect {
+  fill: #000;
+}
+
+.creation-btn:hover svg path {
+  fill: #000;
+}
+
+.creation-btn svg rect {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.creation-btn svg path {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 .mb-0 {
@@ -110,6 +129,8 @@ a {
   color: #011C1A;
   -webkit-transition: border .2s ease;
   transition: border .2s ease;
+  min-height: 48px;
+  caret-color: #C69A39;
 }
 
 .input::-webkit-input-placeholder {
@@ -232,6 +253,12 @@ a {
 
 .footer__menu-item a {
   color: #C3DAE2;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.footer__menu-item a:hover {
+  color: #C69A39;
 }
 
 .footer__socials {
@@ -316,12 +343,19 @@ a {
 
 .creation-page__btns button {
   padding: 12px 38px;
+  min-width: 196px;
 }
 
 .creation-page__publish {
   margin-left: 20px;
   background-color: #C69A39;
-  border: none;
+  border: 0.5px solid #C69A39;
+  -webkit-transition: background-color .3s ease;
+  transition: background-color .3s ease;
+}
+
+.creation-page__publish:hover {
+  background-color: #fff;
 }
 
 .creation-main__title {
@@ -357,9 +391,15 @@ a {
           align-items: center;
   cursor: pointer;
   margin-bottom: 18px;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
-.creation-main__photo img {
+.creation-main__photo:hover {
+  background-color: #c7dbe2b4;
+}
+
+.creation-main__photo svg {
   display: block;
   margin: auto;
   margin-bottom: 12px;
@@ -570,7 +610,9 @@ input[type="radio"]:checked::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 3px 16px;
+  padding: 6px 16px;
+  -ms-flex-preferred-size: 43.2%;
+      flex-basis: 43.2%;
 }
 
 .creation-refs__text {
@@ -595,7 +637,7 @@ input[type="radio"]:checked::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 12px 30px;
+  padding: 11.5px 30px;
 }
 
 .creation-memories__text {
@@ -632,7 +674,7 @@ input[type="radio"]:checked::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 12px 30px;
+  padding: 11.5px 30px;
   margin-top: 30px;
 }
 

@@ -25,7 +25,11 @@
         margin-bottom: 50px
         & button
             padding: 12px 38px
+            min-width: 196px
     &__publish
         margin-left: 20px
         background-color: $primary
-        border: none
+        border: 0.5px solid $primary
+        transition: background-color .3s ease
+        &:hover
+            background-color: #fff
