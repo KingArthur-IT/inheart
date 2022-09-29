@@ -67,30 +67,30 @@ textarea {
   margin-right: 3px;
 }
 
-.creation-btn {
+.btn-with-icon {
   -webkit-transition: background-color .3s ease;
   transition: background-color .3s ease;
 }
 
-.creation-btn:hover {
+.btn-with-icon:hover {
   background-color: #C69A39;
   border: 0.5px solid #C69A39;
 }
 
-.creation-btn:hover svg rect {
+.btn-with-icon:hover svg rect {
   fill: #000;
 }
 
-.creation-btn:hover svg path {
+.btn-with-icon:hover svg path {
   fill: #000;
 }
 
-.creation-btn svg rect {
+.btn-with-icon svg rect {
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
 
-.creation-btn svg path {
+.btn-with-icon svg path {
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
@@ -185,6 +185,15 @@ textarea {
   margin-bottom: 8px;
 }
 
+@media screen and (max-width: 424px) {
+  .container {
+    padding: 0 20px;
+  }
+  .text {
+    font-size: 16px;
+  }
+}
+
 .header {
   width: 100%;
   background-color: #fff;
@@ -215,7 +224,7 @@ textarea {
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 424px) {
   .header__wrapper {
     padding: 16px 20px;
   }
@@ -414,13 +423,13 @@ textarea {
 
 .creation-page__title {
   font-size: 60px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .creation-page__section {
   background-color: #fff;
   border-radius: 40px;
-  padding: 30px 21px 45px;
+  padding: 32px 21px 45px;
   margin-bottom: 50px;
 }
 
@@ -462,6 +471,57 @@ textarea {
 
 .creation-page__publish:hover {
   background-color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  .creation-page {
+    padding-top: 80px;
+  }
+  .creation-page__title {
+    font-size: 46px;
+    margin-bottom: 35px;
+  }
+  .creation-page__btns {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .creation-page {
+    padding-top: 60px;
+  }
+  .creation-page__title {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+  .creation-page__section {
+    padding: 30px 20px;
+    margin-bottom: 30px;
+  }
+  .creation-page__section-title {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  .creation-page__btns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 30px;
+  }
+  .creation-page__btns button {
+    width: 100%;
+  }
+  .creation-page__publish {
+    margin-left: 0px;
+    margin-top: 18px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .creation-page__title {
+    font-size: 34px;
+  }
 }
 
 .creation-main__title {
@@ -532,6 +592,30 @@ textarea {
 .creation-main__date {
   -ms-flex-preferred-size: 48%;
       flex-basis: 48%;
+}
+
+@media screen and (max-width: 424px) {
+  .creation-main__title {
+    margin-bottom: 30px;
+  }
+  .creation-main__subtext {
+    font-size: 12px;
+    margin-bottom: 30px;
+  }
+  .creation-main__date-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .creation-main__date {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-bottom: 18px;
+  }
+  .creation-main__date:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .creation-template__wrap {
@@ -727,6 +811,74 @@ input[type="radio"]:checked::after {
       flex-basis: 43.2%;
 }
 
+.creation-media__attachment-mobile {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 6px 16px;
+}
+
+@media screen and (max-width: 424px) {
+  .creation-epitaph__text {
+    padding: 0 10px;
+  }
+  .creation-media__text {
+    padding: 0;
+  }
+  .creation-media__photo-wrap {
+    width: 110px;
+    height: 110px;
+  }
+  .creation-media__photo-hero svg {
+    margin-bottom: 4px;
+    width: 17px;
+  }
+  .creation-media__photo-hero p {
+    font-size: 12px;
+  }
+  .creation-media__photo-text {
+    font-size: 14px;
+    margin-bottom: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .creation-media__photo-text span {
+    margin-top: 10px;
+    font-size: 12px;
+    width: 85%;
+  }
+  .creation-media__inputs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .creation-media__inputs input {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .creation-media__inputs p {
+    margin: 18px 0;
+  }
+  .creation-media__attachment {
+    display: none;
+  }
+  .creation-media__attachment-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    width: 100%;
+  }
+}
+
 .creation-refs__text {
   font-family: 'Grafita Special';
   text-align: center;
@@ -739,6 +891,7 @@ input[type="radio"]:checked::after {
   color: #C69A39;
   text-align: center;
   margin-bottom: 30px;
+  opacity: 0.8;
 }
 
 .creation-refs__btn {
@@ -750,6 +903,8 @@ input[type="radio"]:checked::after {
       -ms-flex-align: center;
           align-items: center;
   padding: 11.5px 30px;
+  margin-top: 30px;
+  min-width: 170px;
 }
 
 .creation-memories__text {
@@ -788,6 +943,22 @@ input[type="radio"]:checked::after {
           align-items: center;
   padding: 11.5px 30px;
   margin-top: 30px;
+  min-width: 170px;
+}
+
+@media screen and (max-width: 424px) {
+  .creation-refs__text {
+    padding: 0;
+    margin-bottom: 10px;
+  }
+  .creation-memories__title {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .creation-memories__text {
+    padding: 0;
+  }
 }
 
 .creation-find__text {
@@ -802,10 +973,18 @@ input[type="radio"]:checked::after {
   margin-bottom: 18px;
 }
 
-.creation-find__map {
+.creation-find__map-wrap {
+  overflow: hidden;
   border-radius: 28px;
-  width: 100%;
   margin: 30px 0;
+}
+
+.creation-find__map {
+  width: 100%;
+  height: 360px;
+  background: url("../assets/cemetary.png") no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .creation-find__coords-wrap {
@@ -846,4 +1025,17 @@ input[type="radio"]:checked::after {
 .creation-find__help p {
   font-size: 14px;
   color: #C69A39;
+}
+
+.creation-find__details-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 424px) {
+  .creation-find .label span {
+    display: none;
+  }
+  .creation-find__details-mobile {
+    display: inline !important;
+  }
 }

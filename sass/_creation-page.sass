@@ -6,11 +6,11 @@
     padding-top: 100px
     &__title
         font-size: 60px
-        margin-bottom: 50px
+        margin-bottom: 40px
     &__section
         background-color: #fff
         border-radius: 40px
-        padding: 30px 21px 45px
+        padding: 32px 21px 45px
         margin-bottom: 50px
     &__section-title
         font-size: 40px
@@ -33,3 +33,38 @@
         transition: background-color .3s ease
         &:hover
             background-color: #fff
+
+@media screen and (max-width: 600px)
+    .creation-page
+        padding-top: 80px
+        &__title
+            font-size: 46px
+            margin-bottom: 35px
+        &__btns
+            margin-bottom: 40px
+
+@media screen and (max-width: 424px)
+    .creation-page
+        padding-top: 60px
+        &__title
+            font-size: 40px
+            margin-bottom: 30px
+        &__section
+            padding: 30px 20px
+            margin-bottom: 30px
+        &__section-title
+            font-size: 30px
+            margin-bottom: 30px
+        &__btns
+            flex-direction: column
+            margin-bottom: 30px
+            & button
+                width: 100%
+        &__publish
+            margin-left: 0px
+            margin-top: 18px
+
+@media screen and (max-width: 360px)
+    .creation-page
+        &__title
+            font-size: 34px

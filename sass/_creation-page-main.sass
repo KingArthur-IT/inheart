@@ -36,3 +36,18 @@
         justify-content: space-between
     &__date
         flex-basis: 48%
+
+@media screen and (max-width: 424px)
+    .creation-main
+        &__title
+            margin-bottom: 30px
+        &__subtext
+            font-size: 12px
+            margin-bottom: 30px
+        &__date-wrap
+            flex-direction: column
+        &__date
+            flex-basis: 100%
+            margin-bottom: 18px
+            &:last-child
+                margin-bottom: 0

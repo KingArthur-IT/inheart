@@ -11,7 +11,7 @@
     <header class="header">
         <div class="header__wrapper">
             <img src="./assets/logo.svg" alt="Inheart" class="header__logo">
-            <input type="button" value="Зберегти та Закрити" class="btn creation-btn header__btn">
+            <input type="button" value="Зберегти та Закрити" class="btn btn-with-icon header__btn">
         </div>
     </header>
     <main class="creation-page">
@@ -150,7 +150,7 @@
                 <p class="text creation-epitaph__text">
                     Напишіть якомога детальну біографію. Це дозволить передати пам'ять про людину через покоління. Якщо ви не можете згадати якийсь момент із життя, не переживайте! Біографію можна відредагувати чи доповнити у майбутньому
                 </p>
-                <div class="input__wrapper">
+                <div class="input__wrapper mb-0">
                     <label class="label">Бiографiя</label>
                     <textarea cols="30" rows="10" class="input" placeholder="Бiографiя"></textarea>
                 </div>
@@ -162,7 +162,7 @@
                     Додавайте фотографії, відео, записи голосу. Все, що допоможе зберегти пам'ять про людину
                 </p>
                 <p class="text creation-media__photo-text">Фото</p>
-                <div class="creation-btn creation-media__photo-wrap">
+                <div class="btn-with-icon creation-media__photo-wrap">
                     <div class="creation-media__photo-hero">
                         <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M5.93702 2.84538C6.00787 2.74688 6.08656 2.62631 6.18689 2.46372C6.22356 2.40431 6.32355 2.23934 6.39799 2.11653L6.4818 1.97841C7.31079 0.622387 7.91339 0 9 0H14V2H9C8.91327 2 8.6405 2.28172 8.1882 3.02159L8.11542 3.14154L8.11524 3.14183C8.04019 3.26566 7.93096 3.44589 7.88887 3.51409C7.76592 3.71332 7.66375 3.86988 7.56061 4.01326C7.11237 4.63641 6.66434 5 6 5H3C2.44772 5 2 5.44772 2 6V15C2 15.5523 2.44772 16 3 16H19C19.5523 16 20 15.5523 20 15V9H22V15C22 16.6569 20.6569 18 19 18H3C1.34315 18 0 16.6569 0 15V6C0 4.34315 1.34315 3 3 3H5.8162C5.84949 2.96194 5.8903 2.91033 5.93702 2.84538ZM16 5V3H18V1H20V3H22V5H20V7H18V5H16ZM11 15C8.23858 15 6 12.7614 6 10C6 7.23858 8.23858 5 11 5C13.7614 5 16 7.23858 16 10C16 12.7614 13.7614 15 11 15ZM11 13C12.6569 13 14 11.6569 14 10C14 8.34315 12.6569 7 11 7C9.34315 7 8 8.34315 8 10C8 11.6569 9.34315 13 11 13Z" fill="#C69A39"/>
@@ -175,7 +175,7 @@
                 <div class="creation-media__inputs">
                     <input type="text" class="input" placeholder="Посилання на відео">
                     <p class="text">або</p>
-                    <button class="btn creation-btn creation-media__attachment">
+                    <button class="btn btn-with-icon creation-media__attachment">
                         <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <mask id="mask0_746_31918" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5" y="5" width="25" height="24">
                                 <path d="M18.4568 23.8072L10.8572 16.326C9.35598 14.8482 9.11895 12.4511 10.4693 10.8389C12.0137 8.99333 14.8007 8.89433 16.4815 10.549L25.3596 19.2888C26.3006 20.2151 26.4801 21.7212 25.6397 22.7324C24.67 23.8991 22.9246 23.9628 21.8687 22.9233L14.3266 15.4987C13.9315 15.1098 13.9315 14.4734 14.3266 14.0845C14.7216 13.6956 15.3681 13.6956 15.7632 14.0845L22.0483 20.2717C22.3428 20.5616 22.8312 20.5616 23.1257 20.2717C23.4202 19.9818 23.4202 19.5009 23.1257 19.211L16.9412 13.1228C16.0002 12.1965 14.4702 12.0197 13.4431 12.8471C12.2579 13.8017 12.1933 15.5199 13.2491 16.5594L20.6691 23.8638C22.1704 25.3416 24.6054 25.575 26.2431 24.2456C28.125 22.7183 28.2184 19.9818 26.5376 18.3271L17.7241 9.65094C15.6626 7.62154 12.3082 7.2892 10.0599 9.1206C7.48123 11.2349 7.34476 14.9896 9.65767 17.2665L17.3793 24.8679C17.6738 25.1578 18.1623 25.1578 18.4568 24.8679C18.7513 24.578 18.7513 24.0971 18.4568 23.8072Z" fill="black"/>
@@ -185,6 +185,17 @@
                             </g>
                         </svg>
                         Завантажити відео з комп'ютера
+                    </button>
+                    <button class="btn btn-with-icon creation-media__attachment creation-media__attachment-mobile">
+                        <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_746_319180" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5" y="5" width="25" height="24">
+                                <path d="M18.4568 23.8072L10.8572 16.326C9.35598 14.8482 9.11895 12.4511 10.4693 10.8389C12.0137 8.99333 14.8007 8.89433 16.4815 10.549L25.3596 19.2888C26.3006 20.2151 26.4801 21.7212 25.6397 22.7324C24.67 23.8991 22.9246 23.9628 21.8687 22.9233L14.3266 15.4987C13.9315 15.1098 13.9315 14.4734 14.3266 14.0845C14.7216 13.6956 15.3681 13.6956 15.7632 14.0845L22.0483 20.2717C22.3428 20.5616 22.8312 20.5616 23.1257 20.2717C23.4202 19.9818 23.4202 19.5009 23.1257 19.211L16.9412 13.1228C16.0002 12.1965 14.4702 12.0197 13.4431 12.8471C12.2579 13.8017 12.1933 15.5199 13.2491 16.5594L20.6691 23.8638C22.1704 25.3416 24.6054 25.575 26.2431 24.2456C28.125 22.7183 28.2184 19.9818 26.5376 18.3271L17.7241 9.65094C15.6626 7.62154 12.3082 7.2892 10.0599 9.1206C7.48123 11.2349 7.34476 14.9896 9.65767 17.2665L17.3793 24.8679C17.6738 25.1578 18.1623 25.1578 18.4568 24.8679C18.7513 24.578 18.7513 24.0971 18.4568 23.8072Z" fill="black"/>
+                            </mask>
+                            <g mask="url(#mask0_746_319180)">
+                                <rect width="24.1906" height="24.1906" transform="matrix(0.712635 0.701535 -0.712635 0.701535 17.5566 0.294189)" fill="#C69A39"/>
+                            </g>
+                        </svg>
+                        Завантажити відео з телефону
                     </button>
                 </div>
             </section>
@@ -199,11 +210,11 @@
                     <label class="label">Посилання</label>
                     <input type="text" class="input" placeholder="Посилання">
                 </div>
-                <div class="input__wrapper">
+                <div class="input__wrapper mb-0">
                     <label class="label">Назва посилання</label>
                     <input type="text" class="input" placeholder="Назва посилання">
                 </div>
-                <button class="btn creation-btn creation-refs__btn">
+                <button class="btn btn-with-icon creation-refs__btn">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g id="Content / add">
                             <mask id="mask0_746_32010" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5" y="5" width="14" height="14">
@@ -230,10 +241,12 @@
                     <input type="text" class="input" placeholder="Адреса">
                 </div>
                 <div class="input__wrapper mb-0">
-                    <label class="label">Детальне розташування на цвинтарі (секція, ряд)</label>
+                    <label class="label">Детальне розташування на цвинтарі <span>(секція, ряд)</span></label>
                     <input type="text" class="input" placeholder="секція, ряд">
                 </div>
-                <img src="./assets/cemetary.png" alt="кладовище" class="creation-find__map">
+                <div class="creation-find__map-wrap">
+                    <div class="creation-find__map"></div>
+                </div>
                 <p class="text creation-find__subtext">Точні координати</p>
                 <div class="creation-find__coords-wrap">
                     <div class="creation-find__coord">
@@ -251,13 +264,15 @@
                 </div>
                 <p class="text creation-find__subtext">Як знайти поховання?</p>
                 <div class="input__wrapper mb-0">
-                    <label class="label">Докладно опишіть, як знайти поховання</label>
+                    <label class="label">
+                        <span>Докладно опишіть</span>
+                        <span class="creation-find__details-mobile">Опишіть</span>, як знайти поховання</label>
                     <textarea cols="30" rows="10" class="input" placeholder="Як знайти поховання"></textarea>
                 </div>
             </section>
             <!-- Спогади рiдних та друзiв -->
             <section class="creation-page__section creation-memories">
-                <h2 class="title creation-page__section-title">Спогади рiдних та друзiв</h2>
+                <h2 class="title creation-page__section-title creation-memories__title">Спогади рiдних та друзiв</h2>
                 <p class="text creation-memories__text">
                     Напишіть спогад про померлого. Також ви можете додати спогади друзів. Для цього вам потрібно буде надіслати їм посилання на Сторінку пам'яті
                 </p>
@@ -273,7 +288,7 @@
                     <label class="label">Ім'я автора</label>
                     <input type="text" class="input" placeholder="Ім'я автора">
                 </div>
-                <button class="btn creation-btn creation-memories__btn">
+                <button class="btn btn-with-icon creation-memories__btn">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g id="Content / add">
                             <mask id="mask0_746_32010" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5" y="5" width="14" height="14">
@@ -291,7 +306,7 @@
             </section>
 
             <div class="creation-page__btns">
-                <button class="btn creation-btn">Передпрогляд</button>
+                <button class="btn btn-with-icon">Передпрогляд</button>
                 <button class="btn creation-page__publish">Опублікувати</button>
             </div>
         </div>

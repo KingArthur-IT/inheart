@@ -9,11 +9,14 @@
         color: $primary
         text-align: center
         margin-bottom: 30px
+        opacity: 0.8
     &__btn
         margin: auto
         display: flex
         align-items: center
         padding: 11.5px 30px
+        margin-top: 30px
+        min-width: 170px
 
 .creation-memories
     &__text
@@ -38,4 +41,17 @@
         align-items: center
         padding: 11.5px 30px
         margin-top: 30px
+        min-width: 170px
 
+@media screen and (max-width: 424px)
+    .creation-refs
+        &__text
+            padding: 0
+            margin-bottom: 10px
+    .creation-memories
+        &__title
+            width: 85%
+            margin-left: auto
+            margin-right: auto
+        &__text
+            padding: 0
