@@ -462,6 +462,10 @@ textarea {
   margin-bottom: 24px;
 }
 
+.creation-template__hero label {
+  cursor: pointer;
+}
+
 .creation-template__hero img {
   width: 100%;
 }
@@ -488,6 +492,8 @@ textarea {
 .creation-template__name {
   text-align: center;
   opacity: 0.8;
+  display: block;
+  cursor: pointer;
 }
 
 .creation-template__radio {
