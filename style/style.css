@@ -33,6 +33,10 @@ a {
   color: #011C1A;
 }
 
+textarea {
+  resize: vertical;
+}
+
 .container {
   max-width: 846px;
   margin: auto;
