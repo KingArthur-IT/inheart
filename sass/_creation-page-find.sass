@@ -39,9 +39,16 @@
     &__details-mobile
         display: none
 
-@media screen and (max-width: 424px)
+@media screen and (max-width: 475px)
     .creation-find
         & .label span
             display: none
+@media screen and (max-width: 424px)
+    .creation-find
         &__details-mobile
             display: inline !important
+        &__coords-wrap
+            flex-direction: column
+            margin: 0 auto 18px
+        &__coord:first-child
+            margin-bottom: 18px
