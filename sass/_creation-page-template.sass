@@ -44,6 +44,33 @@
         cursor: pointer
         width: 20px
         height: 20px
+    &__carousel-wrap
+        display: none
+        position: relative
+        padding: 0 41px
+    &__carousel-btn
+        display: block
+        position: relative
+        appearance: none
+        border: none
+        outline: none
+        cursor: pointer
+        border: 1px solid #131414
+        border-radius: 50%
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 36px
+        width: 36px
+        background: #fff
+        position: absolute
+        top: 40%
+        transform: translateY(-50%)
+
+.template-left-btn
+    left: 0
+.template-right-btn
+    right: 0
 
 input[type="radio"]:checked
     &::before
@@ -63,3 +90,11 @@ input[type="radio"]:checked
         width: 24px
         height: 24px
         background: url('../assets/check-circle.svg') no-repeat
+
+
+@media screen and (max-width: 767px)
+    .creation-template
+        &__wrap
+            display: none
+        &__carousel-wrap
+            display: block

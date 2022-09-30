@@ -692,6 +692,49 @@ textarea {
   height: 20px;
 }
 
+.creation-template__carousel-wrap {
+  display: none;
+  position: relative;
+  padding: 0 41px;
+}
+
+.creation-template__carousel-btn {
+  display: block;
+  position: relative;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid #131414;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 36px;
+  width: 36px;
+  background: #fff;
+  position: absolute;
+  top: 40%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.template-left-btn {
+  left: 0;
+}
+
+.template-right-btn {
+  right: 0;
+}
+
 input[type="radio"]:checked::before {
   position: absolute;
   top: -2px;
@@ -711,6 +754,15 @@ input[type="radio"]:checked::after {
   width: 24px;
   height: 24px;
   background: url("../assets/check-circle.svg") no-repeat;
+}
+
+@media screen and (max-width: 767px) {
+  .creation-template__wrap {
+    display: none;
+  }
+  .creation-template__carousel-wrap {
+    display: block;
+  }
 }
 
 .creation-epitaph__text {
