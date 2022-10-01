@@ -20,12 +20,16 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 100);
     });
     //close modal
-    document.querySelector('.modal__btn').addEventListener('click', () => {
+    const closeModal = () => {
       document.querySelector('.modal').classList.remove('modal-visible');
       setTimeout(() => {
         document.querySelector('.modal').classList.remove('modal-display');
       }, 300);
-    })
+    }
+
+    document.querySelector('.modal').addEventListener('click', () => closeModal());
+
+    document.querySelector('.modal__hero').addEventListener('click', (e) => e.stopPropagation())
 })
 
 // Carousel on choose color temlate for tablet and mobile
