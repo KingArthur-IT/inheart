@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-
+    // Mask for dates
     const inputElement = document.querySelectorAll('input[data-type="date"] ').forEach((element) => {
         IMask(
             element,
@@ -9,7 +9,23 @@ document.addEventListener('DOMContentLoaded', () => {
               max: new Date(2050, 0, 1),
               lazy: false
             });
-    }) 
+    });
+
+    //Compas modal
+    //open modal
+    document.querySelector('.creation-find__help').addEventListener('click', () => {
+      document.querySelector('.modal').classList.add('modal-display');
+      setTimeout(() => {
+        document.querySelector('.modal').classList.add('modal-visible');
+      }, 100);
+    });
+    //close modal
+    document.querySelector('.modal__btn').addEventListener('click', () => {
+      document.querySelector('.modal').classList.remove('modal-visible');
+      setTimeout(() => {
+        document.querySelector('.modal').classList.remove('modal-display');
+      }, 300);
+    })
 })
 
 // Carousel on choose color temlate for tablet and mobile

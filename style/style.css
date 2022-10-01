@@ -19,6 +19,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Calvino Grande';
+  src: url("../fonts/calvino/Calvino-Grande-Regular-trial.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -409,6 +416,160 @@ textarea {
   .footer__logo-mobile {
     display: block;
     margin-bottom: 40px;
+  }
+}
+
+.modal-display {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.modal-visible {
+  opacity: 1 !important;
+}
+
+.modal {
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.81);
+  z-index: 100;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.modal__container {
+  max-width: 906px;
+}
+
+.modal__hero {
+  background: #FFFFFF;
+  border-radius: 50px;
+  padding: 15px 17px 15px 54px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal__content {
+  padding-top: 25px;
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+  margin-right: 40px;
+}
+
+.modal__title {
+  font-family: 'Calvino Grande';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 120%;
+  color: #011C1A;
+  margin-bottom: 10px;
+}
+
+.modal__text {
+  font-family: 'Grafita Special';
+  font-size: 18px;
+  line-height: 130%;
+  color: #011C1A;
+  margin-bottom: 38px;
+}
+
+.modal__list {
+  list-style: none;
+}
+
+.modal__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.modal__item p {
+  font-size: 16px;
+  line-height: 130%;
+  color: #011C1A;
+  opacity: 0.8;
+}
+
+.modal__item p a {
+  color: #C69A39;
+}
+
+.modal__num {
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #011C1A;
+  border: 1px solid #C69A39;
+  border-radius: 50%;
+  margin-right: 12px;
+  font-size: 16px;
+}
+
+.modal__comapas-img {
+  height: 100%;
+}
+
+.modal__btn {
+  font-size: 18px;
+  line-height: 130%;
+  color: #FFFFFF;
+  display: block;
+  text-align: center;
+  margin-top: 19px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .modal__comapas-img {
+    display: none;
+  }
+  .modal__content {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .modal__container {
+    padding: 0;
+  }
+  .modal__hero {
+    padding: 15px 17px 15px 35px;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .modal__title {
+    font-size: 30px;
+  }
+  .modal__text {
+    font-size: 16px;
   }
 }
 

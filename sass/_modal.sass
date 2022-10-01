@@ -1,0 +1,97 @@
+.modal-display
+    display: flex !important
+.modal-visible
+    opacity: 1 !important
+.modal
+    width: 100%
+    min-height: 100vh
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: rgba(0, 0, 0, 0.81)
+    z-index: 100
+    justify-content: center
+    align-items: center
+    display: none
+    opacity: 0
+    transition: opacity 0.3s ease
+    &__container
+        max-width: 906px
+    &__hero
+        background: #FFFFFF
+        border-radius: 50px
+        padding: 15px 17px 15px 54px
+        display: flex
+    &__content
+        padding-top: 25px
+        flex-basis: 70%
+        margin-right: 40px
+    &__title
+        font-family: 'Calvino Grande'
+        font-style: normal
+        font-weight: 400
+        font-size: 40px
+        line-height: 120%
+        color: $text-color
+        margin-bottom: 10px
+    &__text
+        font-family: 'Grafita Special'
+        font-size: 18px
+        line-height: 130%
+        color: $text-color
+        margin-bottom: 38px
+    &__list
+        list-style: none
+    &__item
+        display: flex
+        margin-bottom: 20px
+        & p
+            font-size: 16px
+            line-height: 130%
+            color: $text-color
+            opacity: 0.8
+            & a
+                color: $primary
+    &__num
+        width: 30px
+        min-width: 30px
+        height: 30px
+        display: flex
+        justify-content: center
+        align-items: center
+        color: $text-color
+        border: 1px solid $primary
+        border-radius: 50%
+        margin-right: 12px
+        font-size: 16px
+    &__comapas-img
+        height: 100%
+    &__btn
+        font-size: 18px
+        line-height: 130%
+        color: #FFFFFF
+        display: block
+        text-align: center
+        margin-top: 19px
+        cursor: pointer
+
+@media screen and (max-width: 767px)
+    .modal
+        &__comapas-img
+            display: none
+        &__content
+            flex-basis: 100%
+@media screen and (max-width: 600px)
+    .modal
+        &__container
+            padding: 0
+        &__hero
+            padding: 15px 17px 15px 35px
+@media screen and (max-width: 424px)
+    .modal
+        &__title
+            font-size: 30px
+        &__text
+            font-size: 16px
