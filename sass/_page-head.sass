@@ -1,0 +1,84 @@
+.page-head
+    width: 100%
+    min-height: 100vh
+    background-color: #131414
+    padding-top: 100px
+    padding-bottom: 145px
+    display: flex
+    justify-content: center
+    align-items: center
+    &__thumbnail
+        position: relative
+        padding: 65px 55px
+        background: url("../assets/photo-frame.png") no-repeat
+        background-size: cover
+        width: fit-content
+        margin: auto
+    &__photo
+        max-width: 400px
+        max-height: 515px
+        border-radius: 200px
+        overflow: hidden
+        z-index: 1
+    &__thumbnail-label
+        font-family: 'Grafita Special'
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translate(-50%, -15%)
+        font-size: 28px
+        line-height: 1.2
+        color: #FFFFFF
+        background-color: #131414
+        padding: 0 20px
+    &__name-wrapper
+        position: relative
+        margin-top: -135px
+        z-index: 2
+    &__name
+        font-family: 'Calvino Grande'
+        font-weight: 600
+        font-size: 90px
+        line-height: 111%
+        text-align: center
+        color: #C3A195
+        display: block
+        margin-bottom: 140px
+    &__date
+        position: absolute
+        bottom: 13px
+        font-family: 'Grafita Special'
+        font-weight: 400
+        font-size: 28px
+        line-height: 1.2
+        color: #FFFFFF
+    &__date-birth
+        left: -15px
+    &__date-death
+       right: -15px
+    &__quots
+        margin: auto
+        display: block
+        margin-bottom: 8px
+    &__text
+        max-width: 875px
+        margin: auto
+        font-family: 'Grafita Special'
+        font-weight: 400
+        font-size: 26px
+        line-height: 1.3
+        color: #C3DAE2
+        margin-bottom: 60px
+        &::first-letter
+            font-family: 'Calvino Grande'
+            font-size: 90px
+            float: left
+            line-height: 0.8
+            padding-right: 7px
+    &__author
+        font-family: 'Calvino Grande'
+        font-weight: 600
+        font-size: 18px
+        line-height: 1.2
+        text-align: center
+        color: #F7B941

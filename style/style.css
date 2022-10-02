@@ -26,6 +26,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Calvino Grande';
+  src: url("../fonts/calvino/Calvino-Grande-Semibold-trial.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -209,7 +216,7 @@ textarea {
 .header__wrapper {
   max-width: 1440px;
   padding: 26px 80px;
-  margin: auro;
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -223,6 +230,50 @@ textarea {
 
 .header__logo {
   max-width: 100px;
+}
+
+.header-info {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background: transparent;
+}
+
+.header-info__wrapper {
+  max-width: 1440px;
+  padding: 26px 80px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-info__logo {
+  max-width: 100px;
+}
+
+.header-info__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.header-info__menu p {
+  margin-left: 5px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 236%;
+  color: #FFFFFF;
 }
 
 @media screen and (max-width: 767px) {
@@ -1308,4 +1359,123 @@ input[type="radio"]:checked::after {
   .creation-find__coord:first-child {
     margin-bottom: 18px;
   }
+}
+
+.page-head {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #131414;
+  padding-top: 100px;
+  padding-bottom: 145px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page-head__thumbnail {
+  position: relative;
+  padding: 65px 55px;
+  background: url("../assets/photo-frame.png") no-repeat;
+  background-size: cover;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
+.page-head__photo {
+  max-width: 400px;
+  max-height: 515px;
+  border-radius: 200px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.page-head__thumbnail-label {
+  font-family: 'Grafita Special';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -15%);
+          transform: translate(-50%, -15%);
+  font-size: 28px;
+  line-height: 1.2;
+  color: #FFFFFF;
+  background-color: #131414;
+  padding: 0 20px;
+}
+
+.page-head__name-wrapper {
+  position: relative;
+  margin-top: -135px;
+  z-index: 2;
+}
+
+.page-head__name {
+  font-family: 'Calvino Grande';
+  font-weight: 600;
+  font-size: 90px;
+  line-height: 111%;
+  text-align: center;
+  color: #C3A195;
+  display: block;
+  margin-bottom: 140px;
+}
+
+.page-head__date {
+  position: absolute;
+  bottom: 13px;
+  font-family: 'Grafita Special';
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.2;
+  color: #FFFFFF;
+}
+
+.page-head__date-birth {
+  left: -15px;
+}
+
+.page-head__date-death {
+  right: -15px;
+}
+
+.page-head__quots {
+  margin: auto;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.page-head__text {
+  max-width: 875px;
+  margin: auto;
+  font-family: 'Grafita Special';
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.3;
+  color: #C3DAE2;
+  margin-bottom: 60px;
+}
+
+.page-head__text::first-letter {
+  font-family: 'Calvino Grande';
+  font-size: 90px;
+  float: left;
+  line-height: 0.8;
+  padding-right: 7px;
+}
+
+.page-head__author {
+  font-family: 'Calvino Grande';
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+  text-align: center;
+  color: #F7B941;
 }
