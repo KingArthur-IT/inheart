@@ -52,7 +52,7 @@ textarea {
 }
 
 .container {
-  max-width: 846px;
+  max-width: 906px;
   margin: auto;
   padding: 0 30px;
   position: relative;
@@ -981,14 +981,21 @@ input[type="radio"]:checked::after {
   font-family: 'Grafita Special';
   margin-bottom: 30px;
   text-align: center;
-  padding: 0 25px;
+  padding: 0 50px;
+}
+
+.creation-bibliograph__text {
+  font-family: 'Grafita Special';
+  margin-bottom: 30px;
+  text-align: center;
+  padding: 0 40px;
 }
 
 .creation-media__text {
   font-family: 'Grafita Special';
   margin-bottom: 30px;
   text-align: center;
-  padding: 0 65px;
+  padding: 0 80px;
 }
 
 .creation-media__photo-text {
@@ -1080,6 +1087,12 @@ input[type="radio"]:checked::after {
 }
 
 @media screen and (max-width: 767px) {
+  .creation-epitaph__text {
+    padding: 0 25px;
+  }
+  .creation-bibliograph__text {
+    padding: 0 10px;
+  }
   .creation-media__inputs {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1179,7 +1192,7 @@ input[type="radio"]:checked::after {
   font-family: 'Grafita Special';
   text-align: center;
   margin-bottom: 6px;
-  padding: 0 100px;
+  padding: 0 120px;
 }
 
 .creation-refs__ads-text {
@@ -1207,7 +1220,7 @@ input[type="radio"]:checked::after {
   font-family: 'Grafita Special';
   text-align: center;
   margin-bottom: 30px;
-  padding: 0 40px;
+  padding: 0 50px;
 }
 
 .creation-memories__add-text {
@@ -1478,4 +1491,16 @@ input[type="radio"]:checked::after {
   line-height: 1.2;
   text-align: center;
   color: #F7B941;
+}
+
+.page-biography {
+  padding: 115px 0;
+  background: #fff;
+}
+
+.page-biography__title {
+  font-family: 'Calvino Grande';
+  font-size: 40px;
+  line-height: 2.5;
+  margin-bottom: 31px;
 }
