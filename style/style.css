@@ -1834,3 +1834,91 @@ input[type="radio"]:checked::after {
 .page-links__hover:hover {
   opacity: 1;
 }
+
+.page-rested {
+  background: #131414;
+  padding: 114px 0 200px;
+}
+
+.page-rested__hero {
+  max-width: 1440px;
+  padding: 0 80px;
+  margin: auto;
+}
+
+.page-rested__title {
+  font-family: 'Calvino Grande';
+  font-size: 40px;
+  line-height: 2.5;
+  margin-bottom: 35px;
+  text-align: left;
+  color: #C3A195;
+}
+
+.page-rested__subtitle {
+  font-family: 'Calvino Grande';
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 130%;
+  color: #C3A195;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.page-rested__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page-rested__map {
+  margin-right: 130px;
+}
+
+.page-rested__adress {
+  margin-bottom: 39px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.page-rested__adress svg {
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+.page-rested__adress p {
+  font-family: 'Grafita Special';
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.2;
+  color: #FFFFFF;
+}
+
+.page-rested__text {
+  font-family: 'Grafita Special';
+  color: #fff;
+  margin-bottom: 14px;
+}
+
+.page-rested__coords {
+  font-family: 'Grafita';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #FFFFFF;
+}
+
+.page-rested__coords span {
+  font-size: 18px;
+  color: #C3A195;
+}
