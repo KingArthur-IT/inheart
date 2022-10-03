@@ -1,6 +1,8 @@
 .page-biography
     padding: 115px 0
     background: #fff
+    &__main
+        margin-bottom: 65px
     &__title
         font-family: 'Calvino Grande'
         font-size: 40px
@@ -56,6 +58,36 @@
         &:hover
             background-color: #C3DAE2
             border: 1px solid #C3DAE2
+    &__carousel-wrap
+        margin-bottom: 115px
+    &__carousel
+        margin-bottom: 70px
+        & .owl-stage 
+            display: flex
+            align-items: center
+        &-item
+            margin: 0 12px
+    &__controls
+        display: flex
+        margin-left: auto
+        padding-right: 80px
+        width: fit-content
+    &__carousel-btn
+        display: block
+        position: relative
+        appearance: none
+        outline: none
+        cursor: pointer
+        border: 0.5px solid #131414
+        border-radius: 50%
+        background: #fff
+        width: 36px
+        height: 36px
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-left: 13px
+
 .read-more
     color: #0047FF
     margin-left: 12px

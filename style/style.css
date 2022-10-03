@@ -1498,6 +1498,10 @@ input[type="radio"]:checked::after {
   background: #fff;
 }
 
+.page-biography__main {
+  margin-bottom: 65px;
+}
+
 .page-biography__title {
   font-family: 'Calvino Grande';
   font-size: 40px;
@@ -1585,6 +1589,63 @@ input[type="radio"]:checked::after {
 .page-biography__btn:hover {
   background-color: #C3DAE2;
   border: 1px solid #C3DAE2;
+}
+
+.page-biography__carousel-wrap {
+  margin-bottom: 115px;
+}
+
+.page-biography__carousel {
+  margin-bottom: 70px;
+}
+
+.page-biography__carousel .owl-stage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page-biography__carousel-item {
+  margin: 0 12px;
+}
+
+.page-biography__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  padding-right: 80px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.page-biography__carousel-btn {
+  display: block;
+  position: relative;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  cursor: pointer;
+  border: 0.5px solid #131414;
+  border-radius: 50%;
+  background: #fff;
+  width: 36px;
+  height: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 13px;
 }
 
 .read-more {
