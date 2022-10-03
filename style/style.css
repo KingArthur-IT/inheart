@@ -1504,3 +1504,87 @@ input[type="radio"]:checked::after {
   line-height: 2.5;
   margin-bottom: 31px;
 }
+
+.page-biography__friends {
+  max-width: 1440px;
+  padding: 0 80px;
+  margin: auto;
+}
+
+.page-biography__friends .title {
+  text-align: left;
+}
+
+.page-biography__hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 68px;
+}
+
+.page-biography__content {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+}
+
+.page-biography__item {
+  line-height: 1.2;
+  color: #011C1A;
+  margin-bottom: 190px;
+}
+
+.page-biography__item img {
+  margin-bottom: 55px;
+}
+
+.page-biography__item p {
+  font-size: 26px;
+  margin-bottom: 24px;
+}
+
+.page-biography__item p::first-letter {
+  font-family: 'Calvino Grande';
+  font-size: 68px;
+  float: left;
+  line-height: 0.9;
+  padding-right: 7px;
+}
+
+.page-biography__author {
+  font-family: 'Calvino Grande';
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.page-biography__author span {
+  font-family: 'Grafita';
+  font-weight: 400;
+  font-size: 14px;
+  color: #F7B941;
+  margin-left: 11px;
+}
+
+.page-biography__btn {
+  margin-left: auto;
+  min-width: 412px;
+  min-height: 70px;
+  font-family: 'Grafita Special';
+  font-size: 20px;
+  border-radius: 20px;
+  -webkit-transition: background-color .3s ease;
+  transition: background-color .3s ease;
+}
+
+.page-biography__btn:hover {
+  background-color: #C3DAE2;
+  border: 1px solid #C3DAE2;
+}
+
+.read-more {
+  color: #0047FF;
+  margin-left: 12px;
+  cursor: pointer;
+}

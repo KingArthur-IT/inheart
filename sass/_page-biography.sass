@@ -6,4 +6,55 @@
         font-size: 40px
         line-height: 2.5
         margin-bottom: 31px
-        
+    &__friends
+        max-width: 1440px
+        padding: 0 80px
+        margin: auto
+        & .title
+            text-align: left
+    &__hero
+        display: flex
+        justify-content: space-between
+        margin-bottom: 68px
+    &__content
+        flex-basis: 40%
+    &__item
+        line-height: 1.2
+        color: $text-color
+        margin-bottom: 190px
+        & img
+            margin-bottom: 55px
+        & p
+            font-size: 26px
+            margin-bottom: 24px
+            &::first-letter
+                font-family: 'Calvino Grande'
+                font-size: 68px
+                float: left
+                line-height: 0.9
+                padding-right: 7px
+    &__author
+        font-family: 'Calvino Grande'
+        font-weight: 600
+        font-size: 18px
+        & span
+            font-family: 'Grafita'
+            font-weight: 400
+            font-size: 14px
+            color: #F7B941
+            margin-left: 11px
+    &__btn
+        margin-left: auto
+        min-width: 412px
+        min-height: 70px
+        font-family: 'Grafita Special'
+        font-size: 20px
+        border-radius: 20px
+        transition: background-color .3s ease
+        &:hover
+            background-color: #C3DAE2
+            border: 1px solid #C3DAE2
+.read-more
+    color: #0047FF
+    margin-left: 12px
+    cursor: pointer
