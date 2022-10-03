@@ -1530,6 +1530,10 @@ input[type="radio"]:checked::after {
       flex-basis: 40%;
 }
 
+.page-biography__content:first-child {
+  margin-right: 40px;
+}
+
 .page-biography__item {
   line-height: 1.2;
   color: #011C1A;
@@ -1587,4 +1591,142 @@ input[type="radio"]:checked::after {
   color: #0047FF;
   margin-left: 12px;
   cursor: pointer;
+}
+
+.page-media {
+  background: #fff;
+  padding-bottom: 100px;
+}
+
+.page-media__hero {
+  max-width: 1440px;
+  padding: 0 80px;
+  margin: auto;
+}
+
+.page-media__hero .title {
+  text-align: left;
+}
+
+.page-media__title {
+  font-family: 'Calvino Grande';
+  font-size: 40px;
+  line-height: 2.5;
+  margin-bottom: 20px;
+}
+
+.page-media__subtitle {
+  font-family: 'Grafita Special';
+  font-size: 20px;
+  line-height: 130%;
+  color: #131414;
+  margin-bottom: 20px;
+}
+
+.page-media__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: calc(100% + 20px);
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+  margin-bottom: 60px;
+}
+
+.page-media__photo {
+  position: relative;
+  margin: 0 10px;
+  width: 100%;
+}
+
+.page-media__photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.page-media__video {
+  margin: 0 10px;
+  width: 100%;
+}
+
+.page-media__video img {
+  display: block;
+  width: 100%;
+}
+
+.page-media__video figcaption {
+  font-family: 'Calvino Grande';
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #131414;
+  margin-top: 19px;
+}
+
+.page-media__video-item {
+  position: relative;
+}
+
+.page-media__video-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.page-media__more {
+  cursor: pointer;
+  font-family: 'Grafita Special';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #C3A195B2;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.page-media__more span {
+  font-family: 'Grafita Special';
+  font-size: 84px;
+  display: block;
+  line-height: 1.0;
+}
+
+.page-media__item {
+  position: relative;
+}
+
+.page-media__item:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  background: #C3A195B2;
+  opacity: 0;
+}
+
+.page-media__item:hover::after {
+  opacity: 1;
+  cursor: url("../assets/cursor/Open.png"), pointer;
 }
