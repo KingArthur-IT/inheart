@@ -1595,7 +1595,7 @@ input[type="radio"]:checked::after {
 
 .page-media {
   background: #fff;
-  padding-bottom: 100px;
+  padding-bottom: 115px;
 }
 
 .page-media__hero {
@@ -1729,4 +1729,108 @@ input[type="radio"]:checked::after {
 .page-media__item:hover::after {
   opacity: 1;
   cursor: url("../assets/cursor/Open.png"), pointer;
+}
+
+.page-media__video .page-media__item:hover:after {
+  cursor: url("../assets/cursor/Play.png"), pointer;
+}
+
+.page-links {
+  background: #fff;
+  padding-bottom: 150px;
+}
+
+.page-links__hero {
+  max-width: 1440px;
+  padding: 0 80px;
+  margin: auto;
+}
+
+.page-links__title {
+  font-family: 'Calvino Grande';
+  font-size: 40px;
+  line-height: 2.5;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.page-links__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: calc( 100% + 20px);
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+}
+
+.page-links__wrapper {
+  position: relative;
+}
+
+.page-links__item {
+  margin: 0 10px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 0.5px solid #131414;
+  border-radius: 100px;
+  background-color: #fff;
+  padding: 26px 45px;
+  overflow: hidden;
+}
+
+.page-links__name {
+  font-family: 'Grafita Special';
+  font-size: 20px;
+  line-height: 1.65;
+  text-align: center;
+  display: block;
+  color: #131414;
+}
+
+.page-links__link {
+  font-family: 'Grafita Special';
+  font-size: 12px;
+  line-height: 1.2;
+  text-align: center;
+  display: block;
+  color: #C3A195;
+}
+
+.page-links__hover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #C3A195;
+  font-family: 'Grafita Special';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.65;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #131414;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.page-links__hover:hover {
+  opacity: 1;
 }
