@@ -1789,12 +1789,15 @@ input[type="radio"]:checked::after {
 
 .page-media__hero {
   max-width: 1440px;
-  padding: 0 80px;
   margin: auto;
 }
 
 .page-media__hero .title {
   text-align: left;
+}
+
+.page-media__mobile-hero {
+  display: none;
 }
 
 .page-media__title {
@@ -1922,6 +1925,63 @@ input[type="radio"]:checked::after {
 
 .page-media__video .page-media__item:hover:after {
   cursor: url("../assets/cursor/Play.png"), pointer;
+}
+
+@media screen and (max-width: 1023px) {
+  .page-media__more span {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .page-media__title {
+    text-align: left;
+  }
+  .page-media__hero {
+    display: none;
+  }
+  .page-media__mobile-hero {
+    display: block;
+  }
+  .page-media__list {
+    margin-left: -20px;
+  }
+  .page-media__photo {
+    padding-right: 20px;
+  }
+  .page-media__photo .page-media__more {
+    right: 20px;
+  }
+  .page-media__video {
+    padding-right: 20px;
+  }
+  .page-media__item:hover::after {
+    opacity: 0;
+    cursor: pointer;
+    pointer-events: none;
+  }
+  .page-media__more span {
+    font-size: 84px;
+  }
+  .page-media__subtitle {
+    font-size: 18px;
+  }
+  .page-media__list .owl-stage-outer {
+    width: calc(100% + 30px);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .page-media {
+    padding-bottom: 100px;
+  }
+  .page-media__title {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+  .page-media__subtitle {
+    font-size: 14px;
+  }
 }
 
 .page-links {

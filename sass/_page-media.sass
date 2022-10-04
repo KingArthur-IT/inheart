@@ -3,10 +3,11 @@
     padding-bottom: 115px
     &__hero
         max-width: 1440px
-        padding: 0 80px
         margin: auto
         & .title
             text-align: left
+    &__mobile-hero
+        display: none
     &__title
         font-family: 'Calvino Grande'
         font-size: 40px
@@ -91,3 +92,46 @@
 
 .page-media__video .page-media__item:hover:after
     cursor: url("../assets/cursor/Play.png"), pointer
+
+
+@media screen and (max-width: 1023px)
+    .page-media   
+        &__more
+            & span
+                font-size: 60px
+@media screen and (max-width: 767px)
+    .page-media  
+        &__title
+            text-align: left
+        &__hero
+            display: none
+        &__mobile-hero
+            display: block
+        &__list
+            margin-left: -20px
+        &__photo
+            padding-right: 20px
+            & .page-media__more
+                right: 20px
+        &__video
+            padding-right: 20px
+        &__item
+            &:hover::after
+                opacity: 0
+                cursor: pointer
+                pointer-events: none
+        &__more
+            & span
+                font-size: 84px
+        &__subtitle
+            font-size: 18px
+    .page-media__list .owl-stage-outer
+        width: calc(100% + 30px)
+@media screen and (max-width: 425px)
+    .page-media
+        padding-bottom: 100px
+        &__title
+            font-size: 30px
+            line-height: 1.2
+        &__subtitle
+            font-size: 14px

@@ -1,5 +1,6 @@
 // Carousel on choose color temlate for tablet and mobile
 $(document).ready(function(){
+  //bibliography
   const biographyOwl = $('.page-biography__carousel').owlCarousel({
     loop: true,
     slideTransition: 'linear',
@@ -28,4 +29,16 @@ $(document).ready(function(){
   $('.biography-right-btn').click(function() {
     biographyOwl.trigger('next.owl.carousel');
   })
+
+  //media
+  $('.media-mobile-carousel').owlCarousel({
+    loop: false,
+    slideTransition: 'linear',
+    autoplayTimeout: 2000,
+    autoplaySpeed: 2000,
+    nav: false,
+    dots: false,
+    center: true,
+    items: 1.2
+  });
 });
