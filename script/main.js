@@ -28,8 +28,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     document.querySelector('.modal').addEventListener('click', () => closeModal());
+    document.querySelector('.modal__hero').addEventListener('click', (e) => e.stopPropagation());
 
-    document.querySelector('.modal__hero').addEventListener('click', (e) => e.stopPropagation())
+    //go to page
+    [...document.getElementsByClassName("preview-btn")].forEach((el) => {
+      el.addEventListener('click', () => {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+
+        let theme = 'classic';
+
+        if (urlParams.has('theme')){
+          theme = urlParams.get('theme');
+        }
+        else{
+          theme = document.querySelector('input[name="template-radio"]:checked').value;
+        }
+        window.location.href=`page.html?theme=${theme}`;
+      })
+    })
 })
 
 // Carousel on choose color temlate for tablet and mobile
@@ -60,6 +77,32 @@ $(document).ready(function(){
   })
   $('.template-right-btn').click(function() {
     templateOwl.trigger('next.owl.carousel');
+  })
+
+  templateOwl.on('changed.owl.carousel', function (e) {
+    const sliderValue = e.item.index > 4 ? e.item.index - 4 : e.item.index;
+    let radioValue;
+
+    switch (sliderValue) {
+      case 1:
+        radioValue = 'blue'
+        break;
+      case 2:
+        radioValue = 'classic'
+        break;
+      case 3:
+        radioValue = 'black'
+        break;
+      case 4:
+        radioValue = 'red'
+        break;
+      default:
+        radioValue = 'classic'
+    }
+    
+    var queryParams = new URLSearchParams(window.location.search);
+    queryParams.set("theme", radioValue);
+    history.replaceState(null, null, "?" + queryParams.toString());
   })
 
   // $('#template-mob-radio-1').prop('checked', true);

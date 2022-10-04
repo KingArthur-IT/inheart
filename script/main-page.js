@@ -1,3 +1,9 @@
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+if (urlParams.has('theme')){
+  document.querySelector('body').classList.add(urlParams.get('theme'))
+}
+
 // Carousel on choose color temlate for tablet and mobile
 $(document).ready(function(){
   //bibliography
