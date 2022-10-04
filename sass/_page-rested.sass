@@ -3,7 +3,6 @@
     padding: 114px 0 200px
     &__hero
         max-width: 1440px
-        padding: 0 80px
         margin: auto
     &__title
         font-family: 'Calvino Grande'
@@ -24,10 +23,14 @@
         display: flex
         justify-content: center
         align-items: center
-    &__map
+    &__map-wrapper
         margin-right: 130px
         width: 100%
+        flex-basis: 100%
+    &__map
+        width: 100%
     &__content
+        flex-basis: 54%
     &__adress
         margin-bottom: 39px
         display: flex
@@ -55,9 +58,55 @@
             font-size: 18px
             color: #C3A195
 
+@media screen and (max-width: 1440px)
+    .page-rested
+        &__map-wrapper
+            margin-right: 60px
+        &__content
+            flex-basis: 75%
+
+@media screen and (max-width: 1023px)
+    .page-rested
+        padding: 100px 0
+        &__wrapper
+            flex-direction: column
+        &__map-wrapper
+            margin-right: 0
+            margin-bottom: 60px
+        &__content
+            flex-basis: 100%
+
+@media screen and (max-width: 767px)
+    .page-rested
+        &__adress
+            & p
+                font-size: 22px
+        &__text
+            font-size: 16px
+        & span
+            font-size: 16px
+
 @media screen and (max-width: 425px)
     .page-rested
         &__wrapper
             flex-direction: column
-        &__map
+        &__map-wrapper
+            width: calc(100% + 40px)
             margin-right: 0
+            overflow: hidden
+        &__map
+            width: 200%
+        &__title
+            font-size: 30px
+            line-height: 1.2
+        &__subtitle
+            font-size: 30px
+        &__adress
+            & p
+                font-size: 16px
+        &__text
+            font-size: 14px
+        &__coords
+            font-size: 12px
+        & span
+            font-size: 14px

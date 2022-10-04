@@ -2067,7 +2067,6 @@ input[type="radio"]:checked::after {
 
 .page-rested__hero {
   max-width: 1440px;
-  padding: 0 80px;
   margin: auto;
 }
 
@@ -2102,9 +2101,20 @@ input[type="radio"]:checked::after {
           align-items: center;
 }
 
-.page-rested__map {
+.page-rested__map-wrapper {
   margin-right: 130px;
   width: 100%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.page-rested__map {
+  width: 100%;
+}
+
+.page-rested__content {
+  -ms-flex-preferred-size: 54%;
+      flex-basis: 54%;
 }
 
 .page-rested__adress {
@@ -2149,6 +2159,48 @@ input[type="radio"]:checked::after {
   color: #C3A195;
 }
 
+@media screen and (max-width: 1440px) {
+  .page-rested__map-wrapper {
+    margin-right: 60px;
+  }
+  .page-rested__content {
+    -ms-flex-preferred-size: 75%;
+        flex-basis: 75%;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .page-rested {
+    padding: 100px 0;
+  }
+  .page-rested__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .page-rested__map-wrapper {
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+  .page-rested__content {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .page-rested__adress p {
+    font-size: 22px;
+  }
+  .page-rested__text {
+    font-size: 16px;
+  }
+  .page-rested span {
+    font-size: 16px;
+  }
+}
+
 @media screen and (max-width: 425px) {
   .page-rested__wrapper {
     -webkit-box-orient: vertical;
@@ -2156,7 +2208,31 @@ input[type="radio"]:checked::after {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .page-rested__map {
+  .page-rested__map-wrapper {
+    width: calc(100% + 40px);
     margin-right: 0;
+    overflow: hidden;
+  }
+  .page-rested__map {
+    width: 200%;
+  }
+  .page-rested__title {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+  .page-rested__subtitle {
+    font-size: 30px;
+  }
+  .page-rested__adress p {
+    font-size: 16px;
+  }
+  .page-rested__text {
+    font-size: 14px;
+  }
+  .page-rested__coords {
+    font-size: 12px;
+  }
+  .page-rested span {
+    font-size: 14px;
   }
 }
