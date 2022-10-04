@@ -199,6 +199,22 @@ textarea {
   margin-bottom: 8px;
 }
 
+.page-hero-paddings {
+  padding: 0 80px;
+}
+
+@media screen and (max-width: 800px) {
+  .page-hero-paddings {
+    padding: 0 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .page-hero-paddings {
+    padding: 0 20px;
+  }
+}
+
 @media screen and (max-width: 424px) {
   .container {
     padding: 0 20px;
@@ -280,6 +296,9 @@ textarea {
   .header__wrapper {
     padding: 26px 30px;
   }
+  .header-info__wrapper {
+    padding: 26px 30px;
+  }
 }
 
 @media screen and (max-width: 424px) {
@@ -287,6 +306,12 @@ textarea {
     padding: 16px 20px;
   }
   .header__logo {
+    max-width: 87px;
+  }
+  .header-info__wrapper {
+    padding: 16px 20px;
+  }
+  .header-info__logo {
     max-width: 87px;
   }
 }
@@ -1391,10 +1416,6 @@ input[type="radio"]:checked::after {
           align-items: center;
 }
 
-.page-head__hero {
-  padding: 0 20px;
-}
-
 .page-head__thumbnail {
   position: relative;
   padding: 65px 55px;
@@ -1910,7 +1931,6 @@ input[type="radio"]:checked::after {
 
 .page-links__hero {
   max-width: 1440px;
-  padding: 0 80px;
   margin: auto;
 }
 
@@ -1932,14 +1952,16 @@ input[type="radio"]:checked::after {
   width: calc( 100% + 20px);
   -webkit-transform: translateX(-10px);
           transform: translateX(-10px);
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.page-links__wrapper {
+.page-links__item-wrapper {
   position: relative;
+  padding: 0 10px;
 }
 
 .page-links__item {
-  margin: 0 10px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2003,12 +2025,38 @@ input[type="radio"]:checked::after {
   opacity: 1;
 }
 
+@media screen and (max-width: 1440px) {
+  .page-links__item-wrapper {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .page-links {
+    padding-bottom: 80px;
+  }
+  .page-links__item-wrapper {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+}
+
 @media screen and (max-width: 425px) {
   .page-links__list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .page-links__title {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+  .page-links__name {
+    font-size: 18px;
   }
 }
 

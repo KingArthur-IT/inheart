@@ -3,7 +3,6 @@
     padding-bottom: 150px
     &__hero
         max-width: 1440px
-        padding: 0 80px
         margin: auto
     &__title
         font-family: 'Calvino Grande'
@@ -16,10 +15,11 @@
         justify-content: space-between
         width: calc( 100% + 20px )
         transform: translateX(-10px)
-    &__wrapper
+        flex-wrap: wrap
+    &__item-wrapper
         position: relative
+        padding: 0 10px
     &__item
-        margin: 0 10px
         position: relative
         display: flex
         flex-direction: column
@@ -62,7 +62,23 @@
         &:hover
             opacity: 1
 
+@media screen and (max-width: 1440px)
+    .page-links
+        &__item-wrapper
+            flex-basis: 50%
+            margin-bottom: 30px
+@media screen and (max-width: 767px)
+    .page-links
+        padding-bottom: 80px
+        &__item-wrapper
+            flex-basis: 100%
+            margin-bottom: 20px
 @media screen and (max-width: 425px)
     .page-links
         &__list
             flex-direction: column
+        &__title
+            font-size: 30px
+            line-height: 1.2
+        &__name
+            font-size: 18px
