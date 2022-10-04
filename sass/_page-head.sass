@@ -7,11 +7,13 @@
     display: flex
     justify-content: center
     align-items: center
+    &__hero
+        padding: 0 20px
     &__thumbnail
         position: relative
         padding: 65px 55px
         background: url("../assets/photo-frame.png") no-repeat
-        background-size: cover
+        background-size: contain
         width: fit-content
         margin: auto
     &__photo
@@ -20,6 +22,8 @@
         border-radius: 200px
         overflow: hidden
         z-index: 1
+        & img
+            width: 100%
     &__thumbnail-label
         font-family: 'Grafita Special'
         position: absolute
@@ -31,6 +35,7 @@
         color: #FFFFFF
         background-color: #131414
         padding: 0 20px
+        text-align: center
     &__name-wrapper
         position: relative
         margin-top: -135px
@@ -43,19 +48,25 @@
         text-align: center
         color: #C3A195
         display: block
+    &__surname
+        padding: 0 45px
+        width: fit-content
+    &__date-wrap
+        display: flex
+        justify-content: center
+        align-items: flex-end
         margin-bottom: 140px
     &__date
-        position: absolute
-        bottom: 13px
         font-family: 'Grafita Special'
         font-weight: 400
         font-size: 28px
-        line-height: 1.2
+        line-height: 2.0
         color: #FFFFFF
-    &__date-birth
-        left: -15px
-    &__date-death
-       right: -15px
+    &__date-dash
+        padding: 20px
+    &__date-wrap-mobile
+        display: none
+        margin-bottom: 100px
     &__quots
         margin: auto
         display: block
@@ -82,3 +93,49 @@
         line-height: 1.2
         text-align: center
         color: #F7B941
+
+@media screen and (max-width: 767px)
+    .page-head   
+        padding-top: 120px
+        &__date-wrap
+            display: none
+        &__date-wrap-mobile
+            display: block
+            & div
+                text-align: center
+        &__surname
+            margin: auto
+        &__thumbnail-label
+            font-size: 22px
+        &__name
+            font-size: 60px
+        &__date
+            font-size: 22px
+        &__text
+            font-size: 22px
+        &__author
+            font-size: 16px
+@media screen and (max-width: 550px)
+    .page-head   
+        &__thumbnail
+            padding: 45px 35px
+@media screen and (max-width: 425px)
+    .page-head
+        &__thumbnail-label
+            font-size: 16px
+        &__name
+            font-size: 40px
+        &__date
+            font-size: 16px
+        &__name-wrapper
+            margin-top: -90px
+        &__text
+            font-size: 14px
+            margin-bottom: 30px
+            &::first-letter
+                font-size: 40px
+                line-height: 1
+                padding-right: 7px
+                margin-top: -2px
+        &__author
+            font-size: 12px

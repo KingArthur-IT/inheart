@@ -1391,11 +1391,15 @@ input[type="radio"]:checked::after {
           align-items: center;
 }
 
+.page-head__hero {
+  padding: 0 20px;
+}
+
 .page-head__thumbnail {
   position: relative;
   padding: 65px 55px;
   background: url("../assets/photo-frame.png") no-repeat;
-  background-size: cover;
+  background-size: contain;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -1410,6 +1414,10 @@ input[type="radio"]:checked::after {
   z-index: 1;
 }
 
+.page-head__photo img {
+  width: 100%;
+}
+
 .page-head__thumbnail-label {
   font-family: 'Grafita Special';
   position: absolute;
@@ -1422,6 +1430,7 @@ input[type="radio"]:checked::after {
   color: #FFFFFF;
   background-color: #131414;
   padding: 0 20px;
+  text-align: center;
 }
 
 .page-head__name-wrapper {
@@ -1438,25 +1447,43 @@ input[type="radio"]:checked::after {
   text-align: center;
   color: #C3A195;
   display: block;
+}
+
+.page-head__surname {
+  padding: 0 45px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.page-head__date-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   margin-bottom: 140px;
 }
 
 .page-head__date {
-  position: absolute;
-  bottom: 13px;
   font-family: 'Grafita Special';
   font-weight: 400;
   font-size: 28px;
-  line-height: 1.2;
+  line-height: 2.0;
   color: #FFFFFF;
 }
 
-.page-head__date-birth {
-  left: -15px;
+.page-head__date-dash {
+  padding: 20px;
 }
 
-.page-head__date-death {
-  right: -15px;
+.page-head__date-wrap-mobile {
+  display: none;
+  margin-bottom: 100px;
 }
 
 .page-head__quots {
@@ -1491,6 +1518,73 @@ input[type="radio"]:checked::after {
   line-height: 1.2;
   text-align: center;
   color: #F7B941;
+}
+
+@media screen and (max-width: 767px) {
+  .page-head {
+    padding-top: 120px;
+  }
+  .page-head__date-wrap {
+    display: none;
+  }
+  .page-head__date-wrap-mobile {
+    display: block;
+  }
+  .page-head__date-wrap-mobile div {
+    text-align: center;
+  }
+  .page-head__surname {
+    margin: auto;
+  }
+  .page-head__thumbnail-label {
+    font-size: 22px;
+  }
+  .page-head__name {
+    font-size: 60px;
+  }
+  .page-head__date {
+    font-size: 22px;
+  }
+  .page-head__text {
+    font-size: 22px;
+  }
+  .page-head__author {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .page-head__thumbnail {
+    padding: 45px 35px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .page-head__thumbnail-label {
+    font-size: 16px;
+  }
+  .page-head__name {
+    font-size: 40px;
+  }
+  .page-head__date {
+    font-size: 16px;
+  }
+  .page-head__name-wrapper {
+    margin-top: -90px;
+  }
+  .page-head__text {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  .page-head__text::first-letter {
+    font-size: 40px;
+    line-height: 1;
+    padding-right: 7px;
+    margin-top: -2px;
+  }
+  .page-head__author {
+    font-size: 12px;
+  }
 }
 
 .page-biography {
@@ -1546,6 +1640,7 @@ input[type="radio"]:checked::after {
 
 .page-biography__item img {
   margin-bottom: 55px;
+  width: 100%;
 }
 
 .page-biography__item p {
@@ -1652,6 +1747,18 @@ input[type="radio"]:checked::after {
   color: #0047FF;
   margin-left: 12px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 425px) {
+  .page-biography__hero {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .page-biography__btn {
+    min-width: 0;
+  }
 }
 
 .page-media {
@@ -1896,6 +2003,15 @@ input[type="radio"]:checked::after {
   opacity: 1;
 }
 
+@media screen and (max-width: 425px) {
+  .page-links__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .page-rested {
   background: #131414;
   padding: 114px 0 200px;
@@ -1940,6 +2056,7 @@ input[type="radio"]:checked::after {
 
 .page-rested__map {
   margin-right: 130px;
+  width: 100%;
 }
 
 .page-rested__adress {
@@ -1982,4 +2099,16 @@ input[type="radio"]:checked::after {
 .page-rested__coords span {
   font-size: 18px;
   color: #C3A195;
+}
+
+@media screen and (max-width: 425px) {
+  .page-rested__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .page-rested__map {
+    margin-right: 0;
+  }
 }

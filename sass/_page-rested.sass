@@ -26,6 +26,7 @@
         align-items: center
     &__map
         margin-right: 130px
+        width: 100%
     &__content
     &__adress
         margin-bottom: 39px
@@ -53,3 +54,10 @@
         & span
             font-size: 18px
             color: #C3A195
+
+@media screen and (max-width: 425px)
+    .page-rested
+        &__wrapper
+            flex-direction: column
+        &__map
+            margin-right: 0

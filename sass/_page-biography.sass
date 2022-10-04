@@ -28,6 +28,7 @@
         margin-bottom: 190px
         & img
             margin-bottom: 55px
+            width: 100%
         & p
             font-size: 26px
             margin-bottom: 24px
@@ -92,3 +93,10 @@
     color: #0047FF
     margin-left: 12px
     cursor: pointer
+
+@media screen and (max-width: 425px)
+    .page-biography
+        &__hero
+            flex-direction: column
+        &__btn
+            min-width: 0
