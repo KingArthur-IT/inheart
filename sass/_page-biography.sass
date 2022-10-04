@@ -2,15 +2,18 @@
     padding: 115px 0
     background: #fff
     &__main
+        max-width: 980px
+        margin: auto
+        position: relative
         margin-bottom: 65px
     &__title
         font-family: 'Calvino Grande'
         font-size: 40px
         line-height: 2.5
         margin-bottom: 31px
+        text-align: left
     &__friends
         max-width: 1440px
-        padding: 0 80px
         margin: auto
         & .title
             text-align: left
@@ -94,9 +97,49 @@
     margin-left: 12px
     cursor: pointer
 
-@media screen and (max-width: 425px)
+@media screen and (max-width: 1240px)
     .page-biography
+        &__content
+            flex-basis: 46%
+@media screen and (max-width: 1023px)
+    .page-biography
+        &__item
+            & p
+                font-size: 22px
+@media screen and (max-width: 767px)
+    .page-biography
+        padding: 100px 0
+        &__main-text
+            font-size: 16px
+        &__item
+            margin-bottom: 60px
+            & p
+                font-size: 16px
+
+@media screen and (max-width: 575px)
+    .page-biography     
         &__hero
             flex-direction: column
+            margin-bottom: 0
+        &__content
+            margin-bottom: 60px
+            &:first-child
+                margin-right: 0px
+        &__btn
+            width: 100%
+
+@media screen and (max-width: 425px)
+    .page-biography
+        &__main-text
+            font-size: 14px
+        &__title
+            font-size: 30px
+            line-height: 1.2
         &__btn
             min-width: 0
+        &__item
+            & p
+                font-size: 14px
+                &::first-letter
+                    font-size: 40px
+                    line-height: 0.9

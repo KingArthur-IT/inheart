@@ -12,14 +12,14 @@ $(document).ready(function(){
     center: true,
     responsive:{
       0:{
-        items: 1
-      },
-      525:{
-        items: 2
+        items: 1.5
       },
       768:{
-        items: 3.5
+        items: 2.5
       },
+      1024:{
+        items: 3.5
+      }, 
     }
   });
 
