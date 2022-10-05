@@ -1,7 +1,7 @@
 .page-head
     width: 100%
     min-height: 100vh
-    background-color: #131414
+    background: transparent
     padding-top: 100px
     padding-bottom: 145px
     display: flex
@@ -20,8 +20,18 @@
         border-radius: 200px
         overflow: hidden
         z-index: 1
+        position: relative
+        &::after
+            content: ""
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+            background: linear-gradient(1.2deg, #011C1A 1.14%, rgba(1, 28, 26, 0) 63.47%)
         & img
             width: 100%
+            transition: transform 0.1s linear
     &__thumbnail-label
         font-family: 'Grafita Special'
         position: absolute
@@ -31,9 +41,10 @@
         font-size: 28px
         line-height: 1.2
         color: $classicSecondary
-        background-color: #131414
+        background-color: $classicTextColor
         padding: 0 20px
         text-align: center
+        transition: background-color 0.3s ease
     &__name-wrapper
         position: relative
         margin-top: -135px
@@ -104,6 +115,10 @@
             color: $blackSecondary
         &__thumbnail-label
             color: $blackSecondary
+            background-color: $blackTextColor
+        &__photo
+            &::after
+                background: linear-gradient(1.2deg, #131414 1.14%, rgba(1, 28, 26, 0) 63.47%)
 .red
     & .page-head
         &__name
@@ -116,6 +131,10 @@
             color: $redSecondary
         &__thumbnail-label
             color: $redSecondary
+            background-color: $redTextColor
+        &__photo
+            &::after
+                background: linear-gradient(1.2deg, #33040D 1.14%, rgba(51, 4, 13, 0) 63.47%)
 .blue
     & .page-head
         &__name
@@ -128,6 +147,10 @@
             color: $blueSecondary
         &__thumbnail-label
             color: $bluePrimary
+            background-color: $blueTextColor
+        &__photo
+            &::after
+                background: linear-gradient(1.2deg, #062053 1.14%, rgba(6, 32, 83, 0.16) 63.47%)
 
 @media screen and (max-width: 767px)
     .page-head   

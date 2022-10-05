@@ -51,6 +51,11 @@ textarea {
   resize: vertical;
 }
 
+body {
+  -webkit-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear;
+}
+
 .container {
   max-width: 906px;
   margin: auto;
@@ -148,6 +153,22 @@ textarea {
 
 .blue .text {
   color: #062053;
+}
+
+.classic {
+  background: #011C1A;
+}
+
+.black {
+  background: #131414;
+}
+
+.red {
+  background: #33040D;
+}
+
+.blue {
+  background: #062053;
 }
 
 .input__wrapper {
@@ -1589,7 +1610,7 @@ input[type="radio"]:checked::after {
 .page-head {
   width: 100%;
   min-height: 100vh;
-  background-color: #131414;
+  background: transparent;
   padding-top: 100px;
   padding-bottom: 145px;
   display: -webkit-box;
@@ -1620,10 +1641,25 @@ input[type="radio"]:checked::after {
   border-radius: 200px;
   overflow: hidden;
   z-index: 1;
+  position: relative;
+}
+
+.page-head__photo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(1.2deg, #011C1A 1.14%, rgba(1, 28, 26, 0) 63.47%);
 }
 
 .page-head__photo img {
   width: 100%;
+  -webkit-transition: -webkit-transform 0.1s linear;
+  transition: -webkit-transform 0.1s linear;
+  transition: transform 0.1s linear;
+  transition: transform 0.1s linear, -webkit-transform 0.1s linear;
 }
 
 .page-head__thumbnail-label {
@@ -1636,9 +1672,11 @@ input[type="radio"]:checked::after {
   font-size: 28px;
   line-height: 1.2;
   color: #F7B941;
-  background-color: #131414;
+  background-color: #011C1A;
   padding: 0 20px;
   text-align: center;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .page-head__name-wrapper {
@@ -1746,6 +1784,11 @@ input[type="radio"]:checked::after {
 
 .black .page-head__thumbnail-label {
   color: #FFFFFF;
+  background-color: #131414;
+}
+
+.black .page-head__photo::after {
+  background: linear-gradient(1.2deg, #131414 1.14%, rgba(1, 28, 26, 0) 63.47%);
 }
 
 .red .page-head__name {
@@ -1766,6 +1809,11 @@ input[type="radio"]:checked::after {
 
 .red .page-head__thumbnail-label {
   color: #FFFFFF;
+  background-color: #33040D;
+}
+
+.red .page-head__photo::after {
+  background: linear-gradient(1.2deg, #33040D 1.14%, rgba(51, 4, 13, 0) 63.47%);
 }
 
 .blue .page-head__name {
@@ -1786,6 +1834,11 @@ input[type="radio"]:checked::after {
 
 .blue .page-head__thumbnail-label {
   color: #C1E3FB;
+  background-color: #062053;
+}
+
+.blue .page-head__photo::after {
+  background: linear-gradient(1.2deg, #062053 1.14%, rgba(6, 32, 83, 0.16) 63.47%);
 }
 
 @media screen and (max-width: 767px) {
