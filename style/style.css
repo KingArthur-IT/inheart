@@ -52,8 +52,8 @@ textarea {
 }
 
 body {
-  -webkit-transition: background 0.1s linear;
-  transition: background 0.1s linear;
+  -webkit-transition: background 0.3s linear;
+  transition: background 0.3s linear;
 }
 
 .container {
@@ -175,6 +175,34 @@ body {
   background: #fff !important;
   -webkit-transition: background 0.3s ease;
   transition: background 0.3s ease;
+}
+
+.scrolled-to-footer.classic {
+  background: #001211 !important;
+  -webkit-transition: background 0s;
+  transition: background 0s;
+}
+
+.scrolled-to-footer.black {
+  background: #090909 !important;
+  -webkit-transition: background 0s;
+  transition: background 0s;
+}
+
+.scrolled-to-footer.red {
+  background: #230208 !important;
+  -webkit-transition: background 0s;
+  transition: background 0s;
+}
+
+.scrolled-to-footer.blue {
+  background: #031333 !important;
+  -webkit-transition: background 0s;
+  transition: background 0s;
+}
+
+.displaing {
+  display: block !important;
 }
 
 .input__wrapper {
@@ -615,6 +643,16 @@ body {
 
 .blue .footer__socials path.youtube-triangle {
   fill: #031333;
+}
+
+.footer-fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+  display: none;
 }
 
 @media screen and (max-width: 1023px) {

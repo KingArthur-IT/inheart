@@ -47,10 +47,34 @@ if (headElement){
 document.addEventListener('scroll', (e) => {
   const sectionOffet = 300;
   const currentSectionTop = document.querySelector('.page-biography').getBoundingClientRect().top;
-  
+
   if (currentSectionTop < sectionOffet)
     document.querySelector('body')?.classList.add('white')
   else document.querySelector('body')?.classList.remove('white')
+
+  //footer animation
+  const lastSection = document.querySelector('.page-rested');
+  if (lastSection){
+    const footerHeight = 230;
+    const displacement = window.innerHeight + window.scrollY + footerHeight - document.body.offsetHeight;
+    
+    if (displacement > 0){
+      document.querySelector('footer').classList.add('displaing');
+      document.querySelector('body')?.classList.add('scrolled-to-footer');
+
+      if (displacement < footerHeight){
+        const scaleValue = 1.0 - 0.03 * displacement / footerHeight;
+        const borderR = 120.0 * displacement / footerHeight - 60.0;
+        document.querySelector('main').style["transform"] = `translateY(${-displacement}px) scaleX(${scaleValue})`;
+        document.querySelector('.page-rested').style["border-radius"] = `0 0 ${borderR}px ${borderR}px`
+      }
+
+    }
+    else{
+      document.querySelector('footer').classList.remove('displaing');
+      document.querySelector('body')?.classList.remove('scrolled-to-footer');
+    }
+  }
 })
 
 //media animations
@@ -65,6 +89,11 @@ if (mediaSection){
     })
   })
 }
+
+
+// transform: translateY(-220px) scaleX(0.98);
+//     border-radius: 0 0 60px 60px;
+//     overflow: hidden;
 
 // Carousel on choose color temlate for tablet and mobile
 $(document).ready(function(){
