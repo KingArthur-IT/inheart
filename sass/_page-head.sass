@@ -30,7 +30,7 @@
         transform: translate(-50%, -15%)
         font-size: 28px
         line-height: 1.2
-        color: #FFFFFF
+        color: $classicSecondary
         background-color: #131414
         padding: 0 20px
         text-align: center
@@ -44,7 +44,7 @@
         font-size: 90px
         line-height: 111%
         text-align: center
-        color: #C3A195
+        color: $classicPrimary
         display: block
     &__surname
         padding: 0 45px
@@ -59,7 +59,7 @@
         font-weight: 400
         font-size: 28px
         line-height: 2.0
-        color: #FFFFFF
+        color: $classicSecondary
     &__date-dash
         padding: 20px
     &__date-wrap-mobile
@@ -76,7 +76,7 @@
         font-weight: 400
         font-size: 26px
         line-height: 1.3
-        color: #C3DAE2
+        color: $classicPrimary
         margin-bottom: 60px
         &::first-letter
             font-family: 'Calvino Grande'
@@ -90,7 +90,44 @@
         font-size: 18px
         line-height: 1.2
         text-align: center
-        color: #F7B941
+        color: $classicSecondary
+
+.black
+    & .page-head
+        &__name
+            color: $blackPrimary
+        &__text
+            color: $blackPrimary
+        &__date
+            color: $blackSecondary
+        &__author
+            color: $blackSecondary
+        &__thumbnail-label
+            color: $blackSecondary
+.red
+    & .page-head
+        &__name
+            color: $redPrimary
+        &__text
+            color: $redPrimary
+        &__date
+            color: $redSecondary
+        &__author
+            color: $redSecondary
+        &__thumbnail-label
+            color: $redSecondary
+.blue
+    & .page-head
+        &__name
+            color: $bluePrimary
+        &__text
+            color: $bluePrimary
+        &__date
+            color: $blueSecondary
+        &__author
+            color: $blueSecondary
+        &__thumbnail-label
+            color: $bluePrimary
 
 @media screen and (max-width: 767px)
     .page-head   

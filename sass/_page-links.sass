@@ -28,6 +28,8 @@
         background-color: #fff
         padding: 26px 45px
         overflow: hidden
+        &:hover
+            border-color: transparent
     &__name
         font-family: 'Grafita Special'
         font-size: 20px
@@ -41,14 +43,14 @@
         line-height: 1.2
         text-align: center
         display: block
-        color: #C3A195
+        color: $classicSecondary
     &__hover
         position: absolute
         top: 0
         bottom: 0
         left: 0
         right: 0
-        background: #C3A195
+        background: $classicPrimary
         font-family: 'Grafita Special'
         font-weight: 400
         font-size: 20px
@@ -61,6 +63,25 @@
         transition: opacity 0.3s ease
         &:hover
             opacity: 1
+
+.black
+    & .page-links
+        &__hover
+            background: $blackPrimary
+        &__link
+            color: $blackPrimary
+.red
+    & .page-links
+        &__hover
+            background: $redPrimary
+        &__link
+            color: #6EA2B5
+.blue
+    & .page-links
+        &__hover
+            background: $bluePrimary
+        &__link
+            color: $blueSecondary
 
 @media screen and (max-width: 1440px)
     .page-links

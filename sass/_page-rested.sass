@@ -1,5 +1,5 @@
 .page-rested
-    background: #131414
+    background: $classicTextColor
     padding: 114px 0 200px
     &__hero
         max-width: 1440px
@@ -10,13 +10,13 @@
         line-height: 2.5
         margin-bottom: 35px
         text-align: left
-        color: #C3A195
+        color: $classicPrimary
     &__subtitle
         font-family: 'Calvino Grande'
         font-weight: 600
         font-size: 40px
         line-height: 130%
-        color: #C3A195
+        color: $classicPrimary
         margin-bottom: 12px
         text-align: left
     &__wrapper
@@ -38,25 +38,84 @@
         & svg
             margin-right: 5px
             margin-top: 5px
+            & path
+                fill: $classicSecondary
         & p
             font-family: 'Grafita Special'
             font-weight: 400
             font-size: 26px
             line-height: 1.2
-            color: #FFFFFF
+            color: $classicSecondary
     &__text
         font-family: 'Grafita Special'
-        color: #fff
+        color: $classicSecondary
         margin-bottom: 14px
     &__coords
         font-family: 'Grafita'
         font-weight: 400
         font-size: 14px
         line-height: 1.2
-        color: #FFFFFF
+        color: $classicSecondary
         & span
             font-size: 18px
-            color: #C3A195
+            color: $classicPrimary
+
+.black
+    & .page-rested
+        background: $blackTextColor
+        &__title
+            color: $blackPrimary
+        &__subtitle
+            color: $blackPrimary
+        &__adress 
+            & svg path
+                fill: $blackSecondary
+            & p
+                color: $blackSecondary
+        &__text
+            color: $blackSecondary
+        &__coords
+            color: $blackSecondary
+            & span
+                color: $blackPrimary
+.red
+    & .page-rested
+        background: $redTextColor
+        &__title
+            color: $redPrimary
+        &__subtitle
+            color: $redPrimary
+        &__adress 
+            & svg path
+                fill: $redSecondary
+            & p
+                color: $redSecondary
+        &__text
+            color: $redSecondary
+        &__coords
+            color: $redSecondary
+            & span
+                color: $redPrimary
+
+.blue
+    & .page-rested
+        background: $blueTextColor
+        &__title
+            color: $bluePrimary
+        &__subtitle
+            color: $bluePrimary
+        &__adress 
+            & svg path
+                fill: $blueSecondary
+            & p
+                color: $blueSecondary
+        &__text
+            color: $blueSecondary
+        &__coords
+            color: $blueSecondary
+            & span
+                color: $bluePrimary
+
 
 @media screen and (max-width: 1440px)
     .page-rested

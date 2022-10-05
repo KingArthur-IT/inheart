@@ -4,6 +4,21 @@ $bg-color: #F7FAFC
 $primary: #C69A39
 $secondary: #ff7400
 
+$classicPrimary: #C3DAE2
+$blackPrimary: #C3A195
+$redPrimary: #FFF851
+$bluePrimary: #C1E3FB
+
+$classicSecondary: #F7B941
+$blackSecondary: #FFFFFF
+$redSecondary: #FFFFFF
+$blueSecondary: #4D78AA
+
+$classicTextColor: #011C1A
+$blackTextColor: #131414
+$redTextColor: #33040D
+$blueTextColor: #062053
+
 *
     margin: 0
     padding: 0
@@ -64,6 +79,23 @@ textarea
     color: $text-color
     font-size: 18px
     line-height: 1.35
+
+.black
+    & .title
+        color: $blackTextColor
+    & .text
+        color: $blackTextColor
+.red
+    & .title
+        color: $redTextColor
+    & .text
+        color: $redTextColor
+.blue
+    & .title
+        color: $blueTextColor
+    & .text
+        color: $blueTextColor
+
 .input__wrapper
     max-width: 414px
     margin: auto
