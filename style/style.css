@@ -1968,11 +1968,6 @@ input[type="radio"]:checked::after {
   margin-bottom: 190px;
 }
 
-.page-biography__item img {
-  margin-bottom: 55px;
-  width: 100%;
-}
-
 .page-biography__item p {
   font-size: 26px;
   margin-bottom: 24px;
@@ -1984,6 +1979,20 @@ input[type="radio"]:checked::after {
   float: left;
   line-height: 0.9;
   padding-right: 7px;
+}
+
+.page-biography__img-wrapper {
+  margin-bottom: 55px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.page-biography__img-wrapper img {
+  width: 100%;
+  -webkit-transition: -webkit-transform 0.1s linear;
+  transition: -webkit-transform 0.1s linear;
+  transition: transform 0.1s linear;
+  transition: transform 0.1s linear, -webkit-transform 0.1s linear;
 }
 
 .page-biography__author {

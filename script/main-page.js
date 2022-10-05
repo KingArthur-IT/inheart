@@ -3,6 +3,9 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const theme = urlParams.get('theme');
 
+const winWidth = window.innerWidth;
+const winHeight = window.innerHeight;
+
 let themeHslColor = {h: 176, s: 93, l: 6}
 switch (theme) {
   case 'black':
@@ -26,9 +29,6 @@ if (urlParams.has('theme')){
 //head animations
 const headElement = document.querySelector('.page-head');
 if (headElement){
-  const winWidth = window.innerWidth;
-  const winHeight = window.innerHeight;
-
   headElement.addEventListener('mousemove', (e) => {
     const xColorDisplacement = Math.round(20.0 * e.clientX / winWidth - 1.0);
     const yColorDisplacement = Math.round(4.0 * e.clientY / winHeight - 2.0);
@@ -52,6 +52,19 @@ document.addEventListener('scroll', (e) => {
     document.querySelector('body')?.classList.add('white')
   else document.querySelector('body')?.classList.remove('white')
 })
+
+//media animations
+const mediaSection = document.querySelector('.page-biography__friends');
+if (mediaSection){
+  mediaSection.addEventListener('mousemove', (e) => {
+    const xPhotoDisplacement = Math.round(5 * e.clientX / winWidth - 2.5);
+    const yPhotoDisplacement = Math.round(5 * e.clientY / winHeight - 2.5);
+
+    document.querySelectorAll('.page-biography__img-wrapper img').forEach((img) => {
+      img.style['transform'] = `translate(${xPhotoDisplacement}%, ${yPhotoDisplacement}%)`
+    })
+  })
+}
 
 // Carousel on choose color temlate for tablet and mobile
 $(document).ready(function(){
