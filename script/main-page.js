@@ -23,6 +23,7 @@ if (urlParams.has('theme')){
   document.querySelector('body')?.classList.add(theme)
 }
 
+//head animations
 const headElement = document.querySelector('.page-head');
 if (headElement){
   const winWidth = window.innerWidth;
@@ -35,12 +36,22 @@ if (headElement){
     const xPhotoDisplacement = Math.round(5 * e.clientX / winWidth - 2.5);
     const yPhotoDisplacement = Math.round(5 * e.clientY / winHeight - 2.5);
 
-    document.querySelector('body').style["background-color"] = `hsl(${themeHslColor.h + xColorDisplacement}, ${themeHslColor.s}%, ${themeHslColor.l + yColorDisplacement}%)`;
-    document.querySelector('.page-head__thumbnail-label').style["background-color"] = `hsl(${themeHslColor.h + xColorDisplacement}, ${themeHslColor.s}%, ${themeHslColor.l + yColorDisplacement}%)`;
+    document.querySelector('body').style["background"] = `hsl(${themeHslColor.h + xColorDisplacement}, ${themeHslColor.s}%, ${themeHslColor.l + yColorDisplacement}%)`;
+    document.querySelector('.page-head__thumbnail-label').style["background"] = `hsl(${themeHslColor.h + xColorDisplacement}, ${themeHslColor.s}%, ${themeHslColor.l + yColorDisplacement}%)`;
 
     document.querySelector('.page-head__photo img').style['transform'] = `translate(${xPhotoDisplacement}%, ${yPhotoDisplacement}%)`
   })
 }
+
+//change bg color on scroll
+document.addEventListener('scroll', (e) => {
+  const sectionOffet = 300;
+  const currentSectionTop = document.querySelector('.page-biography').getBoundingClientRect().top;
+  
+  if (currentSectionTop < sectionOffet)
+    document.querySelector('body')?.classList.add('white')
+  else document.querySelector('body')?.classList.remove('white')
+})
 
 // Carousel on choose color temlate for tablet and mobile
 $(document).ready(function(){

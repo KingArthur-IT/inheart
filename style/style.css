@@ -52,8 +52,8 @@ textarea {
 }
 
 body {
-  -webkit-transition: background-color 0.1s linear;
-  transition: background-color 0.1s linear;
+  -webkit-transition: background 0.1s linear;
+  transition: background 0.1s linear;
 }
 
 .container {
@@ -169,6 +169,12 @@ body {
 
 .blue {
   background: #062053;
+}
+
+.white {
+  background: #fff !important;
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 .input__wrapper {
@@ -1672,11 +1678,11 @@ input[type="radio"]:checked::after {
   font-size: 28px;
   line-height: 1.2;
   color: #F7B941;
-  background-color: #011C1A;
+  background: #011C1A;
   padding: 0 20px;
   text-align: center;
-  -webkit-transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease;
+  -webkit-transition: background 0.1s linear;
+  transition: background 0.1s linear;
 }
 
 .page-head__name-wrapper {
@@ -1910,7 +1916,7 @@ input[type="radio"]:checked::after {
 
 .page-biography {
   padding: 115px 0;
-  background: #fff;
+  background: transparent;
 }
 
 .page-biography__main {
