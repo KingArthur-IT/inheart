@@ -1,33 +1,33 @@
+//set theme color
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const theme = urlParams.get('theme');
+
+const winWidth = window.innerWidth;
+const winHeight = window.innerHeight;
+
+let themeHslColor = {h: 176, s: 93, l: 6}
+switch (theme) {
+  case 'black':
+    themeHslColor = {h: 180, s: 3, l: 8}
+    break;
+  case 'red':
+    themeHslColor = {h: 349, s: 85, l: 11}
+    break;
+  case 'blue':
+    themeHslColor = {h: 220, s: 87, l: 17}
+    break; 
+
+  default:
+    break;
+}
+
+if (urlParams.has('theme')){
+  document.querySelector('body')?.classList.remove('classic')
+  document.querySelector('body')?.classList.add(theme)
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-
-  //set theme color
-  const queryString = window.location.search;
-  const urlParams = new URLSearchParams(queryString);
-  const theme = urlParams.get('theme');
-
-  const winWidth = window.innerWidth;
-  const winHeight = window.innerHeight;
-
-  let themeHslColor = {h: 176, s: 93, l: 6}
-  switch (theme) {
-    case 'black':
-      themeHslColor = {h: 180, s: 3, l: 8}
-      break;
-    case 'red':
-      themeHslColor = {h: 349, s: 85, l: 11}
-      break;
-    case 'blue':
-      themeHslColor = {h: 220, s: 87, l: 17}
-      break; 
-
-    default:
-      break;
-  }
-
-  if (urlParams.has('theme')){
-    document.querySelector('body')?.classList.remove('classic')
-    document.querySelector('body')?.classList.add(theme)
-  }
 
   //head animations
   const headElement = document.querySelector('.page-head');
