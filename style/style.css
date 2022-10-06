@@ -2776,7 +2776,7 @@ input[type="radio"]:checked::after {
 }
 
 .page-rested__subtitle {
-  font-family: 'Calvino Grande';
+  font-family: 'Calvino';
   font-weight: 600;
   font-size: 40px;
   line-height: 130%;
