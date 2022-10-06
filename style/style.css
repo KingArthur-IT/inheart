@@ -201,8 +201,8 @@ body {
   transition: background 0s;
 }
 
-.displaing {
-  display: block !important;
+.visible {
+  visibility: visible !important;
 }
 
 .input__wrapper {
@@ -656,7 +656,7 @@ body {
   right: 0;
   z-index: -1;
   width: 100%;
-  display: none;
+  visibility: hidden;
 }
 
 @media screen and (max-width: 1023px) {
@@ -767,6 +767,7 @@ body {
   opacity: 0;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+  overflow-y: scroll;
 }
 
 .modal__container {
@@ -875,7 +876,7 @@ body {
 
 @media screen and (max-width: 600px) {
   .modal__container {
-    padding: 0;
+    padding: 15px;
   }
   .modal__hero {
     padding: 15px 17px 15px 35px;
@@ -1723,8 +1724,8 @@ input[type="radio"]:checked::after {
   background: #011C1A;
   padding: 0 20px;
   text-align: center;
-  -webkit-transition: background 0.1s linear;
-  transition: background 0.1s linear;
+  -webkit-transition: background 0.3s linear;
+  transition: background 0.3s linear;
 }
 
 .page-head__name-wrapper {
@@ -2293,6 +2294,13 @@ input[type="radio"]:checked::after {
 .page-media {
   background: #fff;
   padding-bottom: 115px;
+  opacity: 0;
+  -webkit-transition: opacity 0.6s ease-in;
+  transition: opacity 0.6s ease-in;
+}
+
+.page-media.anim-active {
+  opacity: 1;
 }
 
 .page-media__hero {
