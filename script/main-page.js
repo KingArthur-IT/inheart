@@ -23,6 +23,7 @@ switch (theme) {
 }
 
 if (urlParams.has('theme')){
+  document.querySelector('body')?.classList.remove('classic')
   document.querySelector('body')?.classList.add(theme)
 }
 

@@ -14,7 +14,7 @@
 
 @font-face {
   font-family: 'Calvino';
-  src: url("../fonts/calvino/Calvino-Semibold-trial.ttf") format("truetype");
+  src: url("../fonts/calvino/Calvino-Grande-Semibold/Ttf/Calvino-Grande-Semibold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
 }
@@ -369,6 +369,10 @@ body {
   font-size: 14px;
   line-height: 236%;
   color: #FFFFFF;
+}
+
+.header-info__menu svg {
+  margin-left: 5px;
 }
 
 .logo-black, .logo-red, .logo-blue {
@@ -1760,7 +1764,7 @@ input[type="radio"]:checked::after {
 }
 
 .page-head__date {
-  font-family: 'Grafita Special';
+  font-family: 'Grafita';
   font-weight: 400;
   font-size: 28px;
   line-height: 2.0;
