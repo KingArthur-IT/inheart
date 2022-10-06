@@ -92,9 +92,14 @@ if (mediaSection){
 }
 
 
-// transform: translateY(-220px) scaleX(0.98);
-//     border-radius: 0 0 60px 60px;
-//     overflow: hidden;
+//read more accordeon
+document.querySelectorAll('.read-more').forEach((el) => {
+  el.addEventListener('click', () => {
+    el.querySelector('span').style["display"] = "none";
+    const height = el.querySelector('p').scrollHeight;
+    el.querySelector('p').style["max-height"] = `${height}px`
+  })
+})
 
 // Carousel on choose color temlate for tablet and mobile
 $(document).ready(function(){

@@ -29,15 +29,15 @@
         line-height: 1.2
         color: $classicTextColor
         margin-bottom: 190px
-        & p
-            font-size: 26px
-            margin-bottom: 24px
-            &::first-letter
-                font-family: 'Calvino Grande'
-                font-size: 68px
-                float: left
-                line-height: 0.9
-                padding-right: 7px
+    &__text
+        font-size: 26px
+        margin-bottom: 24px
+        &::first-letter
+            font-family: 'Calvino Grande'
+            font-size: 68px
+            float: left
+            line-height: 0.9
+            padding-right: 7px
     &__img-wrapper
         margin-bottom: 55px
         width: 100%
@@ -99,9 +99,15 @@
             stroke: $classicTextColor
 
 .read-more
-    color: #0047FF
+    display: inline
     margin-left: 12px
     cursor: pointer
+    & span
+        color: #0047FF
+    & p
+        max-height: 0
+        overflow: hidden
+        transition: max-height 0.3s ease
 
 .black
     & .page-biography
@@ -162,9 +168,8 @@
             flex-basis: 46%
 @media screen and (max-width: 1023px)
     .page-biography
-        &__item
-            & p
-                font-size: 22px
+        &__text
+            font-size: 22px
 @media screen and (max-width: 767px)
     .page-biography
         padding: 100px 0
@@ -172,8 +177,8 @@
             font-size: 16px
         &__item
             margin-bottom: 60px
-            & p
-                font-size: 16px
+        &__text
+            font-size: 16px
 
 @media screen and (max-width: 575px)
     .page-biography     
@@ -196,9 +201,8 @@
             line-height: 1.2
         &__btn
             min-width: 0
-        &__item
-            & p
-                font-size: 14px
-                &::first-letter
-                    font-size: 40px
-                    line-height: 0.9
+        &__text
+            font-size: 14px
+            &::first-letter
+                font-size: 40px
+                line-height: 0.9

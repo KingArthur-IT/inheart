@@ -2010,12 +2010,12 @@ input[type="radio"]:checked::after {
   margin-bottom: 190px;
 }
 
-.page-biography__item p {
+.page-biography__text {
   font-size: 26px;
   margin-bottom: 24px;
 }
 
-.page-biography__item p::first-letter {
+.page-biography__text::first-letter {
   font-family: 'Calvino Grande';
   font-size: 68px;
   float: left;
@@ -2129,9 +2129,20 @@ input[type="radio"]:checked::after {
 }
 
 .read-more {
-  color: #0047FF;
+  display: inline;
   margin-left: 12px;
   cursor: pointer;
+}
+
+.read-more span {
+  color: #0047FF;
+}
+
+.read-more p {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.3s ease;
+  transition: max-height 0.3s ease;
 }
 
 .black .page-biography__item {
@@ -2220,7 +2231,7 @@ input[type="radio"]:checked::after {
 }
 
 @media screen and (max-width: 1023px) {
-  .page-biography__item p {
+  .page-biography__text {
     font-size: 22px;
   }
 }
@@ -2235,7 +2246,7 @@ input[type="radio"]:checked::after {
   .page-biography__item {
     margin-bottom: 60px;
   }
-  .page-biography__item p {
+  .page-biography__text {
     font-size: 16px;
   }
 }
@@ -2270,10 +2281,10 @@ input[type="radio"]:checked::after {
   .page-biography__btn {
     min-width: 0;
   }
-  .page-biography__item p {
+  .page-biography__text {
     font-size: 14px;
   }
-  .page-biography__item p::first-letter {
+  .page-biography__text::first-letter {
     font-size: 40px;
     line-height: 0.9;
   }
