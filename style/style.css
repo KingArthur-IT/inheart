@@ -2422,20 +2422,50 @@ input[type="radio"]:checked::after {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(1, 28, 26, 0.5)), to(rgba(1, 28, 26, 0.5)));
   background: linear-gradient(0deg, rgba(1, 28, 26, 0.5), rgba(1, 28, 26, 0.5));
   opacity: 0;
+  cursor: pointer;
+}
+
+.page-media__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 20px;
+  left: 0px;
+  right: 40px;
+  z-index: 5;
 }
 
 .page-media__item:hover::after {
   opacity: 1;
+}
+
+.page-media__item:hover::before {
   cursor: url("../assets/cursor/Open.png"), pointer;
 }
 
-.page-media__video .page-media__item:hover:after {
+.page-media__video .page-media__item:hover::before {
   cursor: url("../assets/cursor/Play.png"), pointer;
+}
+
+.black .page-media__video .page-media__item:hover::before {
+  cursor: url("../assets/cursor/Play-black.png"), pointer;
+}
+
+.red .page-media__video .page-media__item:hover::before {
+  cursor: url("../assets/cursor/Play-red.png"), pointer;
+}
+
+.blue .page-media__video .page-media__item:hover::before {
+  cursor: url("../assets/cursor/Play-blue.png"), pointer;
 }
 
 .black .page-media__item:after {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(195, 161, 149, 0.5)), to(rgba(195, 161, 149, 0.5)));
   background: linear-gradient(0deg, rgba(195, 161, 149, 0.5), rgba(195, 161, 149, 0.5));
+}
+
+.black .page-media__item:hover::before {
+  cursor: url("../assets/cursor/Open-black.png"), pointer;
 }
 
 .black .page-media__more {
@@ -2453,6 +2483,10 @@ input[type="radio"]:checked::after {
   background: linear-gradient(0deg, rgba(51, 4, 13, 0.5), rgba(51, 4, 13, 0.5));
 }
 
+.red .page-media__item:hover::before {
+  cursor: url("../assets/cursor/Open-red.png"), pointer;
+}
+
 .red .page-media__more {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(51, 4, 13, 0.5)), to(rgba(51, 4, 13, 0.5)));
   background: linear-gradient(0deg, rgba(51, 4, 13, 0.5), rgba(51, 4, 13, 0.5));
@@ -2466,6 +2500,10 @@ input[type="radio"]:checked::after {
 .blue .page-media__item:after {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(6, 32, 83, 0.49)), to(rgba(6, 32, 83, 0.49)));
   background: linear-gradient(0deg, rgba(6, 32, 83, 0.49), rgba(6, 32, 83, 0.49));
+}
+
+.blue .page-media__item:hover::before {
+  cursor: url("../assets/cursor/Open-blue.png"), pointer;
 }
 
 .blue .page-media__more {
