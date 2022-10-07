@@ -10,10 +10,31 @@
     &__thumbnail
         position: relative
         padding: 65px 55px
-        background: url("../assets/photo-frame.png") no-repeat
-        background-size: contain
         width: fit-content
         margin: auto
+        transform: translateY(20px)
+        transition: transform 1s 1.8s ease-in-out
+    &__frame
+        position: absolute
+        top: 0
+        bottom: 0
+        right: 0
+        left: 0
+        background: url("../assets/photo-frame.png") no-repeat
+        background-size: contain
+        z-index: 0
+        opacity: 0
+        transition: opacity 1s 2.2s ease-in-out
+        &::before
+            content: ""
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+            background: $classicTextColor
+            z-index: 10
+            transition: top 1s 2.2s ease-in-out
     &__photo
         max-width: 400px
         max-height: 515px
@@ -21,6 +42,9 @@
         overflow: hidden
         z-index: 1
         position: relative
+        padding: 2px
+        opacity: 0
+        transition: opacity 1.6s 1.8s ease-in-out
         &::after
             content: ""
             position: absolute
@@ -29,25 +53,40 @@
             left: 0
             right: 0
             background: linear-gradient(1.2deg, #011C1A 1.14%, rgba(1, 28, 26, 0) 63.47%)
+        &::before
+            content: ""
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+            background: $classicTextColor
+            z-index: 10
+            transition: top 1.0s 1.8s ease-in-out
         & img
             width: 100%
             transition: transform 0.1s linear
     &__thumbnail-label
+        width: 100%
         font-family: 'Grafita Special'
         position: absolute
-        top: 0
+        top: calc(50% - 60px)
         left: 50%
         transform: translate(-50%, -15%)
-        font-size: 28px
+        font-size: 36px
         line-height: 1.2
         color: $classicSecondary
-        background: $classicTextColor
+        // background: $classicTextColor
         padding: 0 20px
         text-align: center
+        z-index: 2
+        opacity: 0
+        transition: top 1s 1.5s ease-out, font-size 1s 1.5s ease-out, opacity 1.3s ease-out
     &__name-wrapper
         position: relative
         margin-top: -135px
         z-index: 2
+        overflow: hidden
     &__name
         font-family: 'Calvino Grande'
         font-weight: 600
@@ -56,6 +95,20 @@
         text-align: center
         color: $classicPrimary
         display: block
+        position: relative
+        opacity: 0
+        transform: translateY(20px)
+        transition: opacity 1.0s 2.3s ease-in-out, transform 1.0s 2.3s ease-in-out
+        &::before
+            content: ""
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+            background: $classicTextColor
+            z-index: 10
+            transition: top 1.5s 2.2s ease-in-out
     &__surname
         padding: 0 45px
         width: fit-content
@@ -70,15 +123,25 @@
         font-size: 28px
         line-height: 2.0
         color: $classicSecondary
+        opacity: 0
+        transform: translateY(30px)
+        transition: opacity 1.5s 2.4s ease-in-out, transform 1.0s 2.2s ease-in-out
     &__date-dash
         padding: 20px
     &__date-wrap-mobile
         display: none
         margin-bottom: 100px
+    &__quots-wrap
+        margin-bottom: 8px
+        opacity: 0
+        transform: translateY(60px)
+        transition: transform 0.5s ease-in-out, opacity 1s ease-in-out
+        &.anim-active
+            transform: translateY(0px)
+            opacity: 1
     &__quots
         margin: auto
         display: block
-        margin-bottom: 8px
     &__text
         max-width: 875px
         margin: auto
@@ -88,12 +151,18 @@
         line-height: 1.3
         color: $classicPrimary
         margin-bottom: 60px
+        opacity: 0
+        transform: translateY(60px)
+        transition: transform 0.5s ease-in-out, opacity 1s ease-in-out
         &::first-letter
             font-family: 'Calvino Grande'
             font-size: 90px
             float: left
             line-height: 0.8
             padding-right: 7px
+        &.anim-active
+            transform: translateY(0px)
+            opacity: 1
     &__author
         font-family: 'Calvino Grande'
         font-weight: 600
@@ -101,7 +170,40 @@
         line-height: 1.2
         text-align: center
         color: $classicSecondary
+        opacity: 0
+        transform: translateY(60px)
+        transition: transform 0.5s ease-in-out, opacity 1s ease-in-out
+        &.anim-active
+            transform: translateY(0px)
+            opacity: 1
 
+// main animation
+.start
+    & .page-head
+        &__thumbnail-label
+            top: 0
+            font-size: 28px
+            opacity: 1
+        &__photo
+            opacity: 1
+            &::before
+                top: 100%
+        &__frame
+            opacity: 1
+            &::before
+                top: 100%
+        &__thumbnail
+            transform: translateY(0px)
+        &__name
+            opacity: 1
+            transform: translateY(0px)
+            &::before
+                top: 100%
+        &__date
+            opacity: 1
+            transform: translateY(0px)
+
+// themes
 .black
     & .page-head
         &__name
@@ -114,10 +216,17 @@
             color: $blackSecondary
         &__thumbnail-label
             color: $blackSecondary
-            background-color: $blackTextColor
+            // background-color: $blackTextColor
         &__photo
             &::after
                 background: linear-gradient(1.2deg, #131414 1.14%, rgba(1, 28, 26, 0) 63.47%)
+    &.start .page-head
+        &__frame::before
+            background: $blackTextColor
+        &__photo::before
+            background: $blackTextColor
+        &__name::before
+            background: $blackTextColor
 .red
     & .page-head
         &__name
@@ -130,10 +239,17 @@
             color: $redSecondary
         &__thumbnail-label
             color: $redSecondary
-            background-color: $redTextColor
+            // background-color: $redTextColor
         &__photo
             &::after
                 background: linear-gradient(1.2deg, #33040D 1.14%, rgba(51, 4, 13, 0) 63.47%)
+    &.start .page-head
+        &__frame::before
+            background: $redTextColor
+        &__photo::before
+            background: $redTextColor
+        &__name::before
+            background: $redTextColor
 .blue
     & .page-head
         &__name
@@ -146,10 +262,16 @@
             color: $blueSecondary
         &__thumbnail-label
             color: $bluePrimary
-            background-color: $blueTextColor
         &__photo
             &::after
                 background: linear-gradient(1.2deg, #062053 1.14%, rgba(6, 32, 83, 0.16) 63.47%)
+    &.start .page-head
+        &__frame::before
+            background: $blueTextColor
+        &__photo::before
+            background: $blueTextColor
+        &__name::before
+            background: $blueTextColor
 
 @media screen and (max-width: 767px)
     .page-head   
@@ -172,6 +294,11 @@
             font-size: 22px
         &__author
             font-size: 16px
+    .start
+        & .page-head
+            &__thumbnail-label
+                top: 0
+                font-size: 22px
 
 @media screen and (max-width: 550px)
     .page-head   
@@ -197,3 +324,8 @@
                 margin-top: -2px
         &__author
             font-size: 12px
+    .start
+        & .page-head
+            &__thumbnail-label
+                top: 0
+                font-size: 16px

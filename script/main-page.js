@@ -25,29 +25,29 @@ switch (theme) {
 if (urlParams.has('theme')){
   document.querySelector('body')?.classList.remove('classic')
   document.querySelector('body')?.classList.add(theme)
+  document.querySelector('body')?.classList.add('start')
 };
 
 document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
     document.querySelector('body')?.classList.add('transition-3');
-    document.querySelector('.page-head__thumbnail-label')?.classList.add('transition-3');
-  }, 500);
-  //head animations
-  const headElement = document.querySelector('.page-head');
-  if (headElement){
-    headElement.addEventListener('mousemove', (e) => {
-      const xColorDisplacement = Math.round(20.0 * e.clientX / winWidth - 1.0);
-      const yColorDisplacement = Math.round(4.0 * e.clientY / winHeight - 2.0);
+  
+    //head animations
+    const headElement = document.querySelector('.page-head');
+    if (headElement){
+      headElement.addEventListener('mousemove', (e) => {
+        const xColorDisplacement = Math.round(20.0 * e.clientX / winWidth - 1.0);
+        const yColorDisplacement = Math.round(4.0 * e.clientY / winHeight - 2.0);
 
-      const xPhotoDisplacement = Math.round(5 * e.clientX / winWidth - 2.5);
-      const yPhotoDisplacement = Math.round(5 * e.clientY / winHeight - 2.5);
+        const xPhotoDisplacement = Math.round(5 * e.clientX / winWidth - 2.5);
+        const yPhotoDisplacement = Math.round(5 * e.clientY / winHeight - 2.5);
 
-      document.querySelector('body').style["background"] = `hsl(${themeHslColor.h + xColorDisplacement}, ${themeHslColor.s}%, ${themeHslColor.l + yColorDisplacement}%)`;
-      document.querySelector('.page-head__thumbnail-label').style["background"] = `hsl(${themeHslColor.h + xColorDisplacement}, ${themeHslColor.s}%, ${themeHslColor.l + yColorDisplacement}%)`;
-
-      document.querySelector('.page-head__photo img').style['transform'] = `translate(${xPhotoDisplacement}%, ${yPhotoDisplacement}%)`
-    })
-  }
+        document.querySelector('body').style["background"] = `hsl(${themeHslColor.h + xColorDisplacement}, ${themeHslColor.s}%, ${themeHslColor.l + yColorDisplacement}%)`;
+        
+        document.querySelector('.page-head__photo img').style['transform'] = `translate(${xPhotoDisplacement}%, ${yPhotoDisplacement}%)`
+      })
+    }
+  }, 3000);
 
   //change bg color on scroll
   document.addEventListener('scroll', (e) => {
@@ -118,7 +118,7 @@ $(document).ready(function(){
     loop: true,
     slideTransition: 'linear',
     autoplay: true,
-    rtl: true,
+    // rtl: true,
     autoplayHoverPause: true,
     autoplayTimeout: 2000,
     autoplaySpeed: 2000,

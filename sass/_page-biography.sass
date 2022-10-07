@@ -1,11 +1,18 @@
 .page-biography
     padding: 115px 0
+    padding-top: 0
     background: transparent
     &__main
         max-width: 980px
         margin: auto
         position: relative
         margin-bottom: 65px
+        opacity: 0
+        transform: translateY(200px)
+        transition: transform 1.5s ease-in-out, opacity 2s ease-in-out
+        &.anim-active
+            transform: translateY(0px)
+            opacity: 1
     &__title
         font-family: 'Calvino Grande'
         font-size: 40px
