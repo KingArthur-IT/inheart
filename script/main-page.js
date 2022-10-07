@@ -110,12 +110,16 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
 })
+
 // Carousel on choose color temlate for tablet and mobile
 $(document).ready(function(){
   //bibliography
   const biographyOwl = $('.page-biography__carousel').owlCarousel({
     loop: true,
     slideTransition: 'linear',
+    autoplay: true,
+    rtl: true,
+    autoplayHoverPause: true,
     autoplayTimeout: 2000,
     autoplaySpeed: 2000,
     nav: false,
