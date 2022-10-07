@@ -93,6 +93,18 @@ document.addEventListener('DOMContentLoaded', () => {
       closeModal('crop');
       cropper.destroy();
     });
+
+
+    //dublicate items
+    document.querySelector('.creation-refs__btn').addEventListener('click', () => {
+      const cloneNode = document.querySelector('.creation-refs__parent').cloneNode(true);
+      document.querySelector('.creation-refs__wrapper').appendChild(cloneNode);
+    });
+
+    document.querySelector('.creation-memories__btn').addEventListener('click', () => {
+      const cloneNode = document.querySelector('.creation-memories__parent').cloneNode(true);
+      document.querySelector('.creation-memories__wrapper').appendChild(cloneNode);
+    });
 })
 
 // Carousel on choose color temlate for tablet and mobile
