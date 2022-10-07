@@ -78,6 +78,67 @@
         margin-top: 19px
         cursor: pointer
 
+.crop-modal
+    &__container
+        width: 100%
+    &__hero
+        flex-direction: column
+        padding: 0
+        overflow: hidden
+    &__img-wrapper
+        background-color: rgba(0, 0, 0, 0.6)
+        max-height: 100%
+        overflow: hidden
+        & img
+            margin: auto
+            display: block
+    &__controls
+        padding-top: 42px
+        padding-bottom: 48px
+        display: flex
+        align-items: center
+        justify-content: center
+    &__btn
+        font-size: 14px
+        line-height: 161%
+        color: #011C1A
+    &__close
+        border: none
+    &__save
+        min-width: 196px
+    & .cropper-view-box
+        outline: none
+        border-radius: 200px
+    & .cropper-move
+        border-radius: 200px
+    & .cropper-line
+        display: none
+    & .point-s
+        display: none
+    & .point-n
+        display: none
+    & .point-w
+        display: none
+    & .point-e
+        display: none
+    & .point-nw
+        background: url("../assets/crop/nw.svg") no-repeat
+        width: 15px
+        height: 15px
+    & .point-ne
+        background: url("../assets/crop/ne.svg") no-repeat
+        width: 15px
+        height: 15px
+    & .point-sw
+        background: url("../assets/crop/sw.svg") no-repeat
+        width: 15px
+        height: 15px
+    & .point-se
+        background: url("../assets/crop/se.svg") no-repeat
+        width: 15px !important
+        height: 15px !important
+
+
 @media screen and (max-width: 767px)
     .modal
         &__comapas-img
@@ -90,9 +151,15 @@
             padding: 15px
         &__hero
             padding: 15px 17px 15px 35px
+    .crop-modal
+        &__hero
+            padding: 0
 @media screen and (max-width: 424px)
     .modal
         &__title
             font-size: 30px
         &__text
             font-size: 16px
+    .crop-modal
+        &__controls
+            flex-direction: column-reverse

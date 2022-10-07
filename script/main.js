@@ -11,24 +11,28 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     });
 
-    //Compas modal
-    //open modal
-    document.querySelector('.creation-find__help').addEventListener('click', () => {
-      document.querySelector('.modal').classList.add('modal-display');
+    //modals
+    const closeModal = (name) => {
+      document.querySelector(`.${name}-modal`).classList.remove('modal-visible');
       setTimeout(() => {
-        document.querySelector('.modal').classList.add('modal-visible');
-      }, 100);
-    });
-    //close modal
-    const closeModal = () => {
-      document.querySelector('.modal').classList.remove('modal-visible');
-      setTimeout(() => {
-        document.querySelector('.modal').classList.remove('modal-display');
+        document.querySelector(`.${name}-modal`).classList.remove('modal-display');
       }, 300);
     }
+    const openModal = (name) => {
+      document.querySelector(`.${name}-modal`).classList.add('modal-display');
+      setTimeout(() => {
+        document.querySelector(`.${name}-modal`).classList.add('modal-visible');
+      }, 100);
+    }
 
-    document.querySelector('.modal').addEventListener('click', () => closeModal());
-    document.querySelector('.modal__hero').addEventListener('click', (e) => e.stopPropagation());
+    //compas modal
+    document.querySelector('.creation-find__help')?.addEventListener('click', () => openModal('compas'));
+    document.querySelector('.compas-modal')?.addEventListener('click', () => closeModal('compas'));
+    document.querySelector('.crop-modal')?.addEventListener('click', () => closeModal('crop'));
+
+    document.querySelectorAll('.modal__hero').forEach(el => {
+      el.addEventListener('click', (e) => e.stopPropagation());
+    }); 
 
     //go to page
     [...document.getElementsByClassName("preview-btn")].forEach((el) => {
@@ -46,7 +50,49 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         window.location.href=`page.html?theme=${theme}`;
       })
-    })
+    });
+
+
+    //Crop modal
+    var cropper;
+    const fullImgInModal = document.querySelector('.crop-modal__img-wrapper img');
+
+    document.querySelector('.creation-main__photo').addEventListener('click', () => {
+      document.querySelector('.creation-main__file-input').click();
+    });
+
+    document.querySelector('.creation-main__file-input').addEventListener('change', (e) => {
+      if (FileReader && e.target.files[0]) {
+          var fr = new FileReader();
+          fr.onload = () => {
+            fullImgInModal.src = fr.result;
+            if (cropper) cropper.destroy();
+            cropper = new Cropper(fullImgInModal, {
+              aspectRatio: 200/ 256,
+              background: false,
+              zoomable: false,
+              guides: false,
+              viewMode: 1,
+              dragMode: 'none',
+              center: false
+            });
+          }
+          fr.readAsDataURL(e.target.files[0]);
+          openModal('crop');
+      }
+    });
+
+    document.querySelector('.crop-modal__save')?.addEventListener('click', () => {
+      document.querySelector('.creation-main__photo-empty')?.classList.add('d-none');
+      document.querySelector('.creation-main__cropped-photo')?.classList.remove('d-none');
+      document.querySelector('.creation-main__cropped-photo').src = cropper.getCroppedCanvas().toDataURL('image/jpeg');
+      closeModal('crop');
+      cropper.destroy();
+    });
+    document.querySelector('.crop-modal__close')?.addEventListener('click', () => {
+      closeModal('crop');
+      cropper.destroy();
+    });
 })
 
 // Carousel on choose color temlate for tablet and mobile

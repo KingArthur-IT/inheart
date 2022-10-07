@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/style.min.css">
     <link rel="stylesheet" href="./style/owl.carousel.min.css">
+    <link rel="stylesheet" href="./style/cropper.min.css">
     <title>Inheart</title>
 </head>
 <body class="bg-light-blue">
@@ -36,7 +37,9 @@
                         </svg>                            
                         <p class="text">Завантажити</p>
                     </div>
+                    <img src="" alt="photo" class="creation-main__cropped-photo d-none">
                 </div>
+                <input type="file" class="creation-main__file-input" accept="image/*">
                 <div class="input__wrapper">
                     <label class="label">Прізвище</label>
                     <input type="text" class="input" placeholder="Прізвище Усоблого">
@@ -426,7 +429,7 @@
     </footer>
 
     <!-- Компас модал -->
-    <div class="modal">
+    <div class="modal compas-modal">
         <div class="container modal__container">
             <div class="modal__hero">
                 <div class="modal__content">
@@ -460,9 +463,24 @@
             <dib class="modal__btn">Закрити</dib>
         </div>
     </div>
+    <!-- Crop modal -->
+    <div class="modal crop-modal">
+        <div class="container modal__container crop-modal__container">
+            <div class="modal__hero crop-modal__hero">
+                <div class="crop-modal__img-wrapper">
+                    <img src="">
+                </div>
+                <div class="crop-modal__controls">
+                    <button class="btn crop-modal__btn crop-modal__close">Скасувати</button>
+                    <button class="btn creation-page__publish crop-modal__btn crop-modal__save">Зберігти</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="./script/jquery.slim.js"></script>
     <script src="./script/imask.js"></script>
     <script src="./script/owl.carousel.min.js"></script>
     <script src="./script/main.js"></script>
+    <script src="./script/cropper.min.js"></script>
 </body>
 </html>
