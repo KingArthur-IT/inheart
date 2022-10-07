@@ -2596,6 +2596,7 @@ input[type="radio"]:checked::after {
 @media screen and (max-width: 767px) {
   .page-biography {
     padding: 100px 0;
+    padding-top: 0;
   }
   .page-biography__main-text {
     font-size: 16px;
