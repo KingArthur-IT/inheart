@@ -25,10 +25,13 @@ switch (theme) {
 if (urlParams.has('theme')){
   document.querySelector('body')?.classList.remove('classic')
   document.querySelector('body')?.classList.add(theme)
-}
+};
 
 document.addEventListener('DOMContentLoaded', () => {
-
+  setTimeout(() => {
+    document.querySelector('body')?.classList.add('transition-3');
+    document.querySelector('.page-head__thumbnail-label')?.classList.add('transition-3');
+  }, 500);
   //head animations
   const headElement = document.querySelector('.page-head');
   if (headElement){
@@ -70,7 +73,10 @@ document.addEventListener('DOMContentLoaded', () => {
           const borderR = 120.0 * displacement / footerHeight - 60.0;
           document.querySelector('main').style["transform"] = `translateY(${-displacement}px) scaleX(${scaleValue})`;
           document.querySelector('.page-rested').style["border-radius"] = `0 0 ${borderR}px ${borderR}px`
-        }
+        } 
+        if (displacement > footerHeight - 10)
+          document.querySelector('footer').classList.add('onTop')
+        else document.querySelector('footer').classList.remove('onTop');
 
       }
       else{
