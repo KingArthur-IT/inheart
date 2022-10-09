@@ -113,19 +113,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Carousel on choose color temlate for tablet and mobile
 $(document).ready(function(){
-  var autoplaySpeed = 6000;
-  //bibliography
+
+  var speedVal = 1;
+  const speedObj = {
+    '1': 3000,
+    '2': 1000,
+    '3': 500,
+    '4': 300
+  }
   const biographyOwl = $('.page-biography__carousel').owlCarousel({
     loop: true,
     slideTransition: 'linear',
     autoplay: true,
-    // rtl: true,
-    // autoplayHoverPause: true,
-    // autoplayTimeout: 6000,
-    autoplaySpeed: autoplaySpeed,
+    autoplayTimeout: speedObj[speedVal],
+    autoplaySpeed: speedObj[speedVal],
+    smartSpeed: speedObj[speedVal],
     nav: false,
     dots: false,
-    items: 4,
     center: true,
     responsive:{
       0:{
@@ -143,26 +147,33 @@ $(document).ready(function(){
   $('.biography-left-btn').click(function() {
     // biographyOwl.trigger('prev.owl.carousel');
 
-    autoplaySpeed = 6000;
-    biographyOwl.trigger('play.owl.autoplay', [autoplaySpeed, autoplaySpeed])
+    speedVal = speedVal > 1 ? speedVal - 1 : speedVal
+    speedUpdate()
   })
   $('.biography-right-btn').click(function() {
-    // biographyOwl.trigger('next.owl.carousel');
-    // biographyOwl.trigger('stop.owl.autoplay')
-
-    autoplaySpeed = 1000;
-    biographyOwl.trigger('play.owl.autoplay', [autoplaySpeed, autoplaySpeed])
+    speedVal = speedVal < 4 ? speedVal + 1 : speedVal
+    speedUpdate()
   })
 
   biographyOwl.on("dragged.owl.carousel", function (event) {
-    // console.log('event : ', event.relatedTarget['_drag']['direction'])
-    if (event.relatedTarget['_drag']['direction'] == 'left')
-      autoplaySpeed = 1000;
-    else autoplaySpeed = 6000;
+    if (event.relatedTarget['_drag']['direction'] == 'left'){
+      speedVal = speedVal < 4 ? speedVal + 1 : speedVal
+      speedUpdate()
+    }
+    else{
+      speedVal = speedVal > 1 ? speedVal - 1 : speedVal
+      speedUpdate()
+    }
 
-    biographyOwl.trigger('play.owl.autoplay', [autoplaySpeed, autoplaySpeed])
   });
 
+  function speedUpdate(){
+    console.log(speedObj[speedVal]);
+    biographyOwl.data('owl.carousel').options.autoplaySpeed = speedObj[speedVal];
+    biographyOwl.data('owl.carousel').options.autoplayTimeout = speedObj[speedVal];
+    biographyOwl.data('owl.carousel').options.smartSpeed = speedObj[speedVal];
+    biographyOwl.trigger( 'refresh.owl.carousel' );
+  }
 
   //media
   $('.media-mobile-carousel').owlCarousel({
