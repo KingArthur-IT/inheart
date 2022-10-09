@@ -51,6 +51,10 @@ textarea {
   resize: vertical;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .transition-3 {
   -webkit-transition: background 0.3s linear;
   transition: background 0.3s linear;
@@ -2614,6 +2618,9 @@ input[type="radio"]:checked::after {
   .page-biography__text {
     font-size: 16px;
   }
+  .page-biography__btn {
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: 575px) {
@@ -2645,6 +2652,8 @@ input[type="radio"]:checked::after {
   }
   .page-biography__btn {
     min-width: 0;
+    font-size: 14px;
+    min-height: 56px;
   }
   .page-biography__text {
     font-size: 14px;
