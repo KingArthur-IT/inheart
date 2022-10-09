@@ -113,6 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Carousel on choose color temlate for tablet and mobile
 $(document).ready(function(){
+  var autoplaySpeed = 6000;
   //bibliography
   const biographyOwl = $('.page-biography__carousel').owlCarousel({
     loop: true,
@@ -120,8 +121,8 @@ $(document).ready(function(){
     autoplay: true,
     // rtl: true,
     // autoplayHoverPause: true,
-    autoplayTimeout: 6000,
-    autoplaySpeed: 6000,
+    // autoplayTimeout: 6000,
+    autoplaySpeed: autoplaySpeed,
     nav: false,
     dots: false,
     items: 4,
@@ -136,15 +137,32 @@ $(document).ready(function(){
       1024:{
         items: 3.5
       }, 
-    }
+    },
   });
 
   $('.biography-left-btn').click(function() {
-    biographyOwl.trigger('prev.owl.carousel');
+    // biographyOwl.trigger('prev.owl.carousel');
+
+    autoplaySpeed = 6000;
+    biographyOwl.trigger('play.owl.autoplay', [autoplaySpeed, autoplaySpeed])
   })
   $('.biography-right-btn').click(function() {
-    biographyOwl.trigger('next.owl.carousel');
+    // biographyOwl.trigger('next.owl.carousel');
+    // biographyOwl.trigger('stop.owl.autoplay')
+
+    autoplaySpeed = 1000;
+    biographyOwl.trigger('play.owl.autoplay', [autoplaySpeed, autoplaySpeed])
   })
+
+  biographyOwl.on("dragged.owl.carousel", function (event) {
+    // console.log('event : ', event.relatedTarget['_drag']['direction'])
+    if (event.relatedTarget['_drag']['direction'] == 'left')
+      autoplaySpeed = 1000;
+    else autoplaySpeed = 6000;
+
+    biographyOwl.trigger('play.owl.autoplay', [autoplaySpeed, autoplaySpeed])
+  });
+
 
   //media
   $('.media-mobile-carousel').owlCarousel({
