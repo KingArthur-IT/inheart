@@ -9,7 +9,7 @@
     align-items: center
     &__thumbnail
         position: relative
-        padding: 65px 55px
+        padding: 56px 50px
         width: fit-content
         margin: auto
         transform: translateY(20px)
@@ -36,7 +36,7 @@
             z-index: 10
             transition: top 1s 2.2s ease-in-out
     &__photo
-        max-width: 400px
+        max-width: 330px
         max-height: 515px
         border-radius: 200px
         overflow: hidden
@@ -64,7 +64,10 @@
             z-index: 10
             transition: top 1.0s 1.8s ease-in-out
         & img
-            width: 100%
+            width: 106%
+            height: 106%
+            margin-left: -3%
+            margin-top: -3%
             transition: transform 0.1s linear
     &__thumbnail-label
         width: 100%
@@ -90,7 +93,7 @@
     &__name
         font-family: 'Calvino Grande'
         font-weight: 600
-        font-size: 90px
+        font-size: 80px
         line-height: 111%
         text-align: center
         color: $classicPrimary
@@ -120,7 +123,7 @@
     &__date
         font-family: 'Grafita'
         font-weight: 400
-        font-size: 28px
+        font-size: 26px
         line-height: 2.0
         color: $classicSecondary
         opacity: 0
@@ -182,7 +185,7 @@
     & .page-head
         &__thumbnail-label
             top: 0
-            font-size: 28px
+            font-size: 26px
             opacity: 1
         &__photo
             opacity: 1
@@ -216,7 +219,6 @@
             color: $blackSecondary
         &__thumbnail-label
             color: $blackSecondary
-            // background-color: $blackTextColor
         &__photo
             &::after
                 background: linear-gradient(1.2deg, #131414 1.14%, rgba(1, 28, 26, 0) 63.47%)
@@ -239,7 +241,6 @@
             color: $redSecondary
         &__thumbnail-label
             color: $redSecondary
-            // background-color: $redTextColor
         &__photo
             &::after
                 background: linear-gradient(1.2deg, #33040D 1.14%, rgba(51, 4, 13, 0) 63.47%)

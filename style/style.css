@@ -1812,7 +1812,7 @@ input[type="radio"]:checked::after {
 
 .page-head__thumbnail {
   position: relative;
-  padding: 65px 55px;
+  padding: 56px 50px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -1853,7 +1853,7 @@ input[type="radio"]:checked::after {
 }
 
 .page-head__photo {
-  max-width: 400px;
+  max-width: 330px;
   max-height: 515px;
   border-radius: 200px;
   overflow: hidden;
@@ -1889,7 +1889,10 @@ input[type="radio"]:checked::after {
 }
 
 .page-head__photo img {
-  width: 100%;
+  width: 106%;
+  height: 106%;
+  margin-left: -3%;
+  margin-top: -3%;
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -1925,7 +1928,7 @@ input[type="radio"]:checked::after {
 .page-head__name {
   font-family: 'Calvino Grande';
   font-weight: 600;
-  font-size: 90px;
+  font-size: 80px;
   line-height: 111%;
   text-align: center;
   color: #C3DAE2;
@@ -1976,7 +1979,7 @@ input[type="radio"]:checked::after {
 .page-head__date {
   font-family: 'Grafita';
   font-weight: 400;
-  font-size: 28px;
+  font-size: 26px;
   line-height: 2.0;
   color: #F7B941;
   opacity: 0;
@@ -2075,7 +2078,7 @@ input[type="radio"]:checked::after {
 
 .start .page-head__thumbnail-label {
   top: 0;
-  font-size: 28px;
+  font-size: 26px;
   opacity: 1;
 }
 
@@ -2311,8 +2314,8 @@ input[type="radio"]:checked::after {
   position: relative;
   margin-bottom: 65px;
   opacity: 0;
-  -webkit-transform: translateY(200px);
-          transform: translateY(200px);
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
   -webkit-transition: opacity 2s ease-in-out, -webkit-transform 1.5s ease-in-out;
   transition: opacity 2s ease-in-out, -webkit-transform 1.5s ease-in-out;
   transition: transform 1.5s ease-in-out, opacity 2s ease-in-out;
@@ -2387,7 +2390,11 @@ input[type="radio"]:checked::after {
 }
 
 .page-biography__img-wrapper img {
-  width: 100%;
+  width: 110%;
+  height: 110%;
+  margin-left: -2.5%;
+  margin-top: -2.5%;
+  margin-bottom: -2.5%;
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -2409,7 +2416,7 @@ input[type="radio"]:checked::after {
 }
 
 .page-biography__btn {
-  margin-left: auto;
+  margin: auto;
   min-width: 412px;
   min-height: 70px;
   font-family: 'Grafita Special';

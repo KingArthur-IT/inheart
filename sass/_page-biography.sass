@@ -8,7 +8,7 @@
         position: relative
         margin-bottom: 65px
         opacity: 0
-        transform: translateY(200px)
+        transform: translateY(100px)
         transition: transform 1.5s ease-in-out, opacity 2s ease-in-out
         &.anim-active
             transform: translateY(0px)
@@ -50,7 +50,11 @@
         width: 100%
         overflow: hidden
         & img
-            width: 100%
+            width: 110%
+            height: 110%
+            margin-left: -2.5%
+            margin-top: -2.5%
+            margin-bottom: -2.5%
             transition: transform 0.1s linear
     &__author
         font-family: 'Calvino Grande'
@@ -63,7 +67,7 @@
             color: $classicSecondary
             margin-left: 11px
     &__btn
-        margin-left: auto
+        margin: auto
         min-width: 412px
         min-height: 70px
         font-family: 'Grafita Special'
