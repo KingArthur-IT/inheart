@@ -809,7 +809,7 @@ textarea {
 }
 
 .modal__text {
-  font-family: 'Grafita Special';
+  font-family: 'Grafita';
   font-size: 18px;
   line-height: 130%;
   color: #011C1A;
@@ -1043,7 +1043,7 @@ textarea {
 
 .creation-page__text {
   text-align: center;
-  font-family: 'Grafita Special';
+  font-family: 'Grafita';
 }
 
 .creation-page__btns {
@@ -1391,28 +1391,28 @@ input[type="radio"]:checked::after {
 }
 
 .creation-epitaph__text {
-  font-family: 'Grafita Special';
+  font-family: 'Grafita';
   margin-bottom: 30px;
   text-align: center;
   padding: 0 50px;
 }
 
 .creation-bibliograph__text {
-  font-family: 'Grafita Special';
+  font-family: 'Grafita';
   margin-bottom: 30px;
   text-align: center;
   padding: 0 40px;
 }
 
 .creation-media__text {
-  font-family: 'Grafita Special';
+  font-family: 'Grafita';
   margin-bottom: 30px;
   text-align: center;
   padding: 0 80px;
 }
 
 .creation-media__photo-text {
-  font-family: 'Grafita Special';
+  font-family: 'Grafita';
   margin-bottom: 18px;
 }
 
@@ -1602,7 +1602,7 @@ input[type="radio"]:checked::after {
 }
 
 .creation-refs__text {
-  font-family: 'Grafita Special';
+  font-family: 'Grafita';
   text-align: center;
   margin-bottom: 6px;
   padding: 0 120px;
@@ -1633,7 +1633,7 @@ input[type="radio"]:checked::after {
 }
 
 .creation-memories__text {
-  font-family: 'Grafita Special';
+  font-family: 'Grafita';
   text-align: center;
   padding: 0 50px;
 }
@@ -1702,13 +1702,13 @@ input[type="radio"]:checked::after {
 }
 
 .creation-find__text {
-  font-family: 'Grafita Special';
+  font-family: 'Grafita';
   text-align: center;
   margin-bottom: 30px;
 }
 
 .creation-find__subtext {
-  font-family: 'Grafita Special';
+  font-family: 'Grafita';
   text-align: center;
   margin-bottom: 18px;
 }
@@ -1901,7 +1901,7 @@ input[type="radio"]:checked::after {
 
 .page-head__thumbnail-label {
   width: 100%;
-  font-family: 'Grafita Special';
+  font-family: 'Grafita';
   position: absolute;
   top: calc(50% - 60px);
   left: 50%;
@@ -2025,7 +2025,7 @@ input[type="radio"]:checked::after {
 .page-head__text {
   max-width: 875px;
   margin: auto;
-  font-family: 'Grafita Special';
+  font-family: 'Grafita';
   font-weight: 400;
   font-size: 26px;
   line-height: 1.3;
@@ -2419,7 +2419,7 @@ input[type="radio"]:checked::after {
   margin: auto;
   min-width: 412px;
   min-height: 70px;
-  font-family: 'Grafita Special';
+  font-family: 'Grafita';
   font-size: 20px;
   border-radius: 20px;
   -webkit-transition: background-color .3s ease;
@@ -2688,7 +2688,7 @@ input[type="radio"]:checked::after {
 }
 
 .page-media__subtitle {
-  font-family: 'Grafita Special';
+  font-family: 'Grafita';
   font-size: 20px;
   line-height: 130%;
   color: #131414;
@@ -2758,7 +2758,7 @@ input[type="radio"]:checked::after {
 
 .page-media__more {
   cursor: pointer;
-  font-family: 'Grafita Special';
+  font-family: 'Grafita';
   position: absolute;
   top: 0;
   bottom: 0;
@@ -2783,7 +2783,7 @@ input[type="radio"]:checked::after {
 }
 
 .page-media__more span {
-  font-family: 'Grafita Special';
+  font-family: 'Grafita';
   font-size: 84px;
   display: block;
   line-height: 1.0;
@@ -3014,7 +3014,7 @@ input[type="radio"]:checked::after {
 }
 
 .page-links__name {
-  font-family: 'Grafita Special';
+  font-family: 'Grafita';
   font-size: 20px;
   line-height: 1.65;
   text-align: center;
@@ -3023,7 +3023,7 @@ input[type="radio"]:checked::after {
 }
 
 .page-links__link {
-  font-family: 'Grafita Special';
+  font-family: 'Grafita';
   font-size: 12px;
   line-height: 1.2;
   text-align: center;
@@ -3038,7 +3038,7 @@ input[type="radio"]:checked::after {
   left: 0;
   right: 0;
   background: #C3DAE2;
-  font-family: 'Grafita Special';
+  font-family: 'Grafita';
   font-weight: 400;
   font-size: 20px;
   line-height: 1.65;
@@ -3197,7 +3197,7 @@ input[type="radio"]:checked::after {
 }
 
 .page-rested__adress p {
-  font-family: 'Grafita Special';
+  font-family: 'Grafita';
   font-weight: 400;
   font-size: 26px;
   line-height: 1.2;
@@ -3205,7 +3205,7 @@ input[type="radio"]:checked::after {
 }
 
 .page-rested__text {
-  font-family: 'Grafita Special';
+  font-family: 'Grafita';
   color: #F7B941;
   margin-bottom: 14px;
 }
