@@ -124,7 +124,7 @@ $(document).ready(function(){
     '3': 600,
     '4': 400
   }
-  var s = 3000;
+  // var s = 3000;
   const biographyOwl = $('.page-biography__carousel').owlCarousel({
     loop: true,
     slideTransition: 'linear',
@@ -150,43 +150,43 @@ $(document).ready(function(){
     },
   });
 
-  document.querySelector('.page-biography__carousel').addEventListener('wheel', (e) => {
-    e.preventDefault();
-    console.log(s);
-    const sign = e.deltaY > 0 ? -1 : 1;
-    if ((sign === -1 && s > 400) || (sign === 1 && s <= 3000)){
-      s += sign * 100;
-      speedUpdate(s);
-    }
-  })
+  // document.querySelector('.page-biography__carousel').addEventListener('wheel', (e) => {
+  //   e.preventDefault();
+  //   console.log(s);
+  //   const sign = e.deltaY > 0 ? -1 : 1;
+  //   if ((sign === -1 && s > 400) || (sign === 1 && s <= 3000)){
+  //     s += sign * 100;
+  //     speedUpdate(s);
+  //   }
+  // })
 
-  $('.biography-left-btn').click(function() {
-    speedVal = speedVal > 1 ? speedVal - 1 : speedVal
-    speedUpdate(speedObj[speedVal])
-  })
-  $('.biography-right-btn').click(function() {
-    speedVal = speedVal < 4 ? speedVal + 1 : speedVal
-    speedUpdate(speedObj[speedVal])
-  })
+  // $('.biography-left-btn').click(function() {
+  //   speedVal = speedVal > 1 ? speedVal - 1 : speedVal
+  //   speedUpdate(speedObj[speedVal])
+  // })
+  // $('.biography-right-btn').click(function() {
+  //   speedVal = speedVal < 4 ? speedVal + 1 : speedVal
+  //   speedUpdate(speedObj[speedVal])
+  // })
 
-  biographyOwl.on("dragged.owl.carousel", function (event) {
-    if (event.relatedTarget['_drag']['direction'] == 'left'){
-      speedVal = speedVal < 4 ? speedVal + 1 : speedVal
-      speedUpdate(speedObj[speedVal])
-    }
-    else{
-      speedVal = speedVal > 1 ? speedVal - 1 : speedVal
-      speedUpdate(speedObj[speedVal])
-    }
+  // biographyOwl.on("dragged.owl.carousel", function (event) {
+  //   if (event.relatedTarget['_drag']['direction'] == 'left'){
+  //     speedVal = speedVal < 4 ? speedVal + 1 : speedVal
+  //     speedUpdate(speedObj[speedVal])
+  //   }
+  //   else{
+  //     speedVal = speedVal > 1 ? speedVal - 1 : speedVal
+  //     speedUpdate(speedObj[speedVal])
+  //   }
 
-  });
+  // });
 
-  function speedUpdate(speed){
-    biographyOwl.data('owl.carousel').options.autoplaySpeed = speed;
-    biographyOwl.data('owl.carousel').options.autoplayTimeout = speed;
-    biographyOwl.data('owl.carousel').options.smartSpeed = speed;
-    biographyOwl.trigger( 'refresh.owl.carousel' );
-  }
+  // function speedUpdate(speed){
+  //   biographyOwl.data('owl.carousel').options.autoplaySpeed = speed;
+  //   biographyOwl.data('owl.carousel').options.autoplayTimeout = speed;
+  //   biographyOwl.data('owl.carousel').options.smartSpeed = speed;
+  //   biographyOwl.trigger( 'refresh.owl.carousel' );
+  // }
 
   //media
   $('.media-mobile-carousel').owlCarousel({
