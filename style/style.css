@@ -1897,10 +1897,10 @@ input[type="radio"]:checked::after {
   height: 106%;
   margin-left: -3%;
   margin-top: -3%;
-  -webkit-transition: -webkit-transform 0.1s linear;
-  transition: -webkit-transform 0.1s linear;
-  transition: transform 0.1s linear;
-  transition: transform 0.1s linear, -webkit-transform 0.1s linear;
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
 }
 
 .page-head__thumbnail-label {
@@ -2000,10 +2000,8 @@ input[type="radio"]:checked::after {
 .page-head__quots-wrap {
   margin-bottom: 8px;
   opacity: 0;
-  -webkit-transition: opacity 1s ease-in-out, -webkit-transform 0.5s ease-in-out;
-  transition: opacity 1s ease-in-out, -webkit-transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out, opacity 1s ease-in-out;
-  transition: transform 0.5s ease-in-out, opacity 1s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out 2.5s;
+  transition: opacity 1s ease-in-out 2.5s;
 }
 
 .page-head__quots-wrap.anim-active {
@@ -2025,10 +2023,8 @@ input[type="radio"]:checked::after {
   color: #C3DAE2;
   margin-bottom: 60px;
   opacity: 0;
-  -webkit-transition: opacity 1s ease-in-out, -webkit-transform 0.5s ease-in-out;
-  transition: opacity 1s ease-in-out, -webkit-transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out, opacity 1s ease-in-out;
-  transition: transform 0.5s ease-in-out, opacity 1s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out 2.5s;
+  transition: opacity 1s ease-in-out 2.5s;
 }
 
 .page-head__text::first-letter {
@@ -2051,14 +2047,27 @@ input[type="radio"]:checked::after {
   text-align: center;
   color: #F7B941;
   opacity: 0;
-  -webkit-transition: opacity 1s ease-in-out, -webkit-transform 0.5s ease-in-out;
-  transition: opacity 1s ease-in-out, -webkit-transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out, opacity 1s ease-in-out;
-  transition: transform 0.5s ease-in-out, opacity 1s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out 2.5s;
+  transition: opacity 1s ease-in-out 2.5s;
 }
 
 .page-head__author.anim-active {
   opacity: 1;
+}
+
+.transition-3 .page-head__quots-wrap {
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.transition-3 .page-head__text {
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.transition-3 .page-head__author {
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 
 .start .page-head__thumbnail-label {
@@ -2360,10 +2369,10 @@ input[type="radio"]:checked::after {
   margin-left: -2.5%;
   margin-top: -2.5%;
   margin-bottom: -2.5%;
-  -webkit-transition: -webkit-transform 0.1s linear;
-  transition: -webkit-transform 0.1s linear;
-  transition: transform 0.1s linear;
-  transition: transform 0.1s linear, -webkit-transform 0.1s linear;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
 }
 
 .page-biography__author {

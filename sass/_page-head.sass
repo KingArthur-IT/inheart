@@ -68,7 +68,7 @@
             height: 106%
             margin-left: -3%
             margin-top: -3%
-            transition: transform 0.1s linear
+            transition: transform 0.3s linear
     &__thumbnail-label
         width: 100%
         font-family: 'Grafita'
@@ -130,10 +130,8 @@
     &__quots-wrap
         margin-bottom: 8px
         opacity: 0
-        // transform: translateY(10px)
-        transition: transform 0.5s ease-in-out, opacity 1s ease-in-out
+        transition: opacity 1s ease-in-out 2.5s
         &.anim-active
-            // transform: translateY(0px)
             opacity: 1
     &__quots
         margin: auto
@@ -148,8 +146,7 @@
         color: $classicPrimary
         margin-bottom: 60px
         opacity: 0
-        // transform: translateY(0px)
-        transition: transform 0.5s ease-in-out, opacity 1s ease-in-out
+        transition: opacity 1s ease-in-out 2.5s
         &::first-letter
             font-family: 'Calvino Grande'
             font-size: 90px
@@ -157,7 +154,6 @@
             line-height: 0.8
             padding-right: 7px
         &.anim-active
-            // transform: translateY(0px)
             opacity: 1
     &__author
         font-family: 'Calvino Grande'
@@ -167,12 +163,18 @@
         text-align: center
         color: $classicSecondary
         opacity: 0
-        // transform: translateY(10px)
-        transition: transform 0.5s ease-in-out, opacity 1s ease-in-out
+        transition: opacity 1s ease-in-out 2.5s
         &.anim-active
-            // transform: translateY(0px)
             opacity: 1
 
+//delay if quats and shows in t=0
+.transition-3 .page-head
+    &__quots-wrap
+        transition: opacity 1s ease-in-out
+    &__text
+        transition: opacity 1s ease-in-out
+    &__author
+        transition: opacity 1s ease-in-out
 // main animation
 .start
     & .page-head

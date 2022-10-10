@@ -34,13 +34,15 @@ document.addEventListener('DOMContentLoaded', () => {
   
     //head animations
     const headElement = document.querySelector('.page-head');
+    const photoDisplacmentMax = 2.4;
+
     if (headElement){
       headElement.addEventListener('mousemove', (e) => {
         const xColorDisplacement = Math.round(20.0 * e.clientX / winWidth - 1.0);
         const yColorDisplacement = Math.round(4.0 * e.clientY / winHeight - 2.0);
 
-        const xPhotoDisplacement = Math.round(5 * e.clientX / winWidth - 2.5);
-        const yPhotoDisplacement = Math.round(5 * e.clientY / winHeight - 2.5);
+        const xPhotoDisplacement = Math.round(photoDisplacmentMax * e.clientX / winWidth - 0.5 * photoDisplacmentMax);
+        const yPhotoDisplacement = Math.round(photoDisplacmentMax * e.clientY / winHeight - 0.5 * photoDisplacmentMax);
 
         document.querySelector('body').style["background"] = `hsl(${themeHslColor.h + xColorDisplacement}, ${themeHslColor.s}%, ${themeHslColor.l + yColorDisplacement}%)`;
         
@@ -89,9 +91,10 @@ document.addEventListener('DOMContentLoaded', () => {
   //media animations
   const mediaSection = document.querySelector('.page-biography__friends');
   if (mediaSection){
+    const imgDisplacmentMax = 2.4;
     mediaSection.addEventListener('mousemove', (e) => {
-      const xPhotoDisplacement = Math.round(5 * e.clientX / winWidth - 2.5);
-      const yPhotoDisplacement = Math.round(5 * e.clientY / winHeight - 2.5);
+      const xPhotoDisplacement = Math.round(imgDisplacmentMax * e.clientX / winWidth - 0.5 * imgDisplacmentMax);
+      const yPhotoDisplacement = Math.round(imgDisplacmentMax * e.clientY / winHeight - 0.5 * imgDisplacmentMax);
 
       document.querySelectorAll('.page-biography__img-wrapper img').forEach((img) => {
         img.style['transform'] = `translate(${xPhotoDisplacement}%, ${yPhotoDisplacement}%)`
