@@ -119,7 +119,7 @@ $(document).ready(function(){
 
   var speedVal = 1;
   const speedObj = {
-    '1': 3000,
+    '1': 4000,
     '2': 1000,
     '3': 600,
     '4': 400
