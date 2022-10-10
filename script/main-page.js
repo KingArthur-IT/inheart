@@ -118,9 +118,10 @@ $(document).ready(function(){
   const speedObj = {
     '1': 3000,
     '2': 1000,
-    '3': 500,
-    '4': 300
+    '3': 600,
+    '4': 400
   }
+  var s = 3000;
   const biographyOwl = $('.page-biography__carousel').owlCarousel({
     loop: true,
     slideTransition: 'linear',
@@ -131,6 +132,8 @@ $(document).ready(function(){
     nav: false,
     dots: false,
     center: true,
+    mouseDrag: false,
+    touchDrag: false,
     responsive:{
       0:{
         items: 1.5
@@ -144,34 +147,41 @@ $(document).ready(function(){
     },
   });
 
-  $('.biography-left-btn').click(function() {
-    // biographyOwl.trigger('prev.owl.carousel');
+  document.querySelector('.page-biography__carousel').addEventListener('wheel', (e) => {
+    e.preventDefault();
+    const sign = e.wheelDeltaY < 0 ? -1 : 1;
+    s += sign * 100;
+    s = s < 400 ? 400 : s;
+    s = s > 3000 ? 3000 : s;
+    console.log(s);
+    speedUpdate(s)
+  })
 
+  $('.biography-left-btn').click(function() {
     speedVal = speedVal > 1 ? speedVal - 1 : speedVal
-    speedUpdate()
+    speedUpdate(speedObj[speedVal])
   })
   $('.biography-right-btn').click(function() {
     speedVal = speedVal < 4 ? speedVal + 1 : speedVal
-    speedUpdate()
+    speedUpdate(speedObj[speedVal])
   })
 
   biographyOwl.on("dragged.owl.carousel", function (event) {
     if (event.relatedTarget['_drag']['direction'] == 'left'){
       speedVal = speedVal < 4 ? speedVal + 1 : speedVal
-      speedUpdate()
+      speedUpdate(speedObj[speedVal])
     }
     else{
       speedVal = speedVal > 1 ? speedVal - 1 : speedVal
-      speedUpdate()
+      speedUpdate(speedObj[speedVal])
     }
 
   });
 
-  function speedUpdate(){
-    console.log(speedObj[speedVal]);
-    biographyOwl.data('owl.carousel').options.autoplaySpeed = speedObj[speedVal];
-    biographyOwl.data('owl.carousel').options.autoplayTimeout = speedObj[speedVal];
-    biographyOwl.data('owl.carousel').options.smartSpeed = speedObj[speedVal];
+  function speedUpdate(speed){
+    biographyOwl.data('owl.carousel').options.autoplaySpeed = speed;
+    biographyOwl.data('owl.carousel').options.autoplayTimeout = speed;
+    biographyOwl.data('owl.carousel').options.smartSpeed = speed;
     biographyOwl.trigger( 'refresh.owl.carousel' );
   }
 
