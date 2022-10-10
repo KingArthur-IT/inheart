@@ -85,6 +85,8 @@
         z-index: 2
         opacity: 0
         transition: top 1s 1.5s ease-out, font-size 1s 1.5s ease-out, opacity 1.3s ease-out
+    &__name-container
+        overflow: hidden
     &__name-wrapper
         position: relative
         margin-top: -135px
@@ -100,21 +102,9 @@
         display: block
         position: relative
         opacity: 0
-        transform: translateY(20px)
+        transform: translateY(100%) rotateZ(4deg)
+        transform-style: preserve-3d
         transition: opacity 1.5s 2.3s ease-in-out, transform 1.0s 2.3s ease-in-out
-        &::before
-            content: ""
-            position: absolute
-            top: 0
-            bottom: 0
-            left: 0
-            right: 0
-            background: $classicTextColor
-            z-index: 10
-            transition: top 1.5s 2.2s ease-in-out
-            // transition: all 1.0s 2.2s ease-in-out
-            border-radius: 50%
-            // transform-origin: 50% 100%
     &__surname
         padding: 0 45px
         width: fit-content
@@ -140,10 +130,10 @@
     &__quots-wrap
         margin-bottom: 8px
         opacity: 0
-        transform: translateY(60px)
+        // transform: translateY(10px)
         transition: transform 0.5s ease-in-out, opacity 1s ease-in-out
         &.anim-active
-            transform: translateY(0px)
+            // transform: translateY(0px)
             opacity: 1
     &__quots
         margin: auto
@@ -158,7 +148,7 @@
         color: $classicPrimary
         margin-bottom: 60px
         opacity: 0
-        transform: translateY(60px)
+        // transform: translateY(0px)
         transition: transform 0.5s ease-in-out, opacity 1s ease-in-out
         &::first-letter
             font-family: 'Calvino Grande'
@@ -167,7 +157,7 @@
             line-height: 0.8
             padding-right: 7px
         &.anim-active
-            transform: translateY(0px)
+            // transform: translateY(0px)
             opacity: 1
     &__author
         font-family: 'Calvino Grande'
@@ -177,10 +167,10 @@
         text-align: center
         color: $classicSecondary
         opacity: 0
-        transform: translateY(60px)
+        // transform: translateY(10px)
         transition: transform 0.5s ease-in-out, opacity 1s ease-in-out
         &.anim-active
-            transform: translateY(0px)
+            // transform: translateY(0px)
             opacity: 1
 
 // main animation
@@ -202,10 +192,7 @@
             transform: translateY(0px)
         &__name
             opacity: 1
-            transform: translateY(0px)
-            &::before
-                // transform: scale(0)
-                top: 100%
+            transform: translateY(0%) rotateZ(0deg)
         &__date
             opacity: 1
             transform: translateY(0px)
@@ -231,8 +218,6 @@
             background: $blackTextColor
         &__photo::before
             background: $blackTextColor
-        &__name::before
-            background: $blackTextColor
 .red
     & .page-head
         &__name
@@ -253,8 +238,6 @@
             background: $redTextColor
         &__photo::before
             background: $redTextColor
-        &__name::before
-            background: $redTextColor
 .blue
     & .page-head
         &__name
@@ -274,8 +257,6 @@
         &__frame::before
             background: $blueTextColor
         &__photo::before
-            background: $blueTextColor
-        &__name::before
             background: $blueTextColor
 
 @media screen and (max-width: 767px)

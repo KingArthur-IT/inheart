@@ -149,12 +149,12 @@ $(document).ready(function(){
 
   document.querySelector('.page-biography__carousel').addEventListener('wheel', (e) => {
     e.preventDefault();
-    const sign = e.wheelDeltaY < 0 ? -1 : 1;
-    s += sign * 100;
-    s = s < 400 ? 400 : s;
-    s = s > 3000 ? 3000 : s;
     console.log(s);
-    speedUpdate(s)
+    const sign = e.wheelDeltaY < 0 ? -1 : 1;
+    if ((sign === -1 && s > 400) || (sign === 1 && s <= 3000)){
+      s += sign * 100;
+      speedUpdate(s);
+    }
   })
 
   $('.biography-left-btn').click(function() {
