@@ -150,7 +150,7 @@ $(document).ready(function(){
   document.querySelector('.page-biography__carousel').addEventListener('wheel', (e) => {
     e.preventDefault();
     console.log(s);
-    const sign = e.deltaY < 0 ? -1 : 1;
+    const sign = e.deltaY > 0 ? -1 : 1;
     if ((sign === -1 && s > 400) || (sign === 1 && s <= 3000)){
       s += sign * 100;
       speedUpdate(s);
